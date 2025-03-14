@@ -7,8 +7,8 @@ const Welcome = () => {
         <div className="welcome-container">
             {/* Top-right Buttons */}
             <div className="top-right-buttons">
-                <Link to="/sport-center" className="right-corner-btn">KMITL Sport Center</Link>
-                <Link to="/hospital" className="right-corner-btn">KMC Hospital</Link>
+                <Link to="/loginsport" className="right-corner-btn">KMITL Sport Center</Link>
+                <Link to="/login" className="right-corner-btn">KMC Hospital</Link>
             </div>
 
             {/* Main Header */}
@@ -21,7 +21,7 @@ const Welcome = () => {
             <section className="sport-section">
                 <h2>KMITL Sport Center</h2>
                 <p>จองสนามกีฬา เช่น บาสเกตบอล แบดมินตัน หรือยิม ผ่านเว็บไซต์</p>
-                <Link to="/login" className="login-register-btn">Login / Register</Link>
+                <Link to="/loginsport" className="login-register-btn">Login / Register</Link>
             </section>
 
             {/* Hospital Section */}

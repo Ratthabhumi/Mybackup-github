@@ -20,6 +20,8 @@ import ResetPassword from './pages/ResetPassword';
 import DoctorHomePage from './pages/doctors/DoctorHomePage';
 import AdminHomePage from './pages/admin/AdminHomePage';
 import Welcome from './pages/Welcome';// Import the Welcome component
+import LoginSport from './pages/LoginSport';// Import the Welcome component
+import RegisterSport from './pages/RegisterSport';// Import the Welcome component
 
 function App() {
   const {loading} = useSelector(state => state.alerts);
@@ -37,7 +39,9 @@ function App() {
       <Route path="/doctor/profile/" element={<ProtectedRoute><Profile/></ProtectedRoute>} />
       <Route path="/doctor/appointment/:doctorId" element={<ProtectedRoute><BookingPage/></ProtectedRoute>} />
       <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
+      <Route path="/loginsport" element={<PublicRoute><LoginSport /></PublicRoute>} />
       <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
+      <Route path="/registersport" element={<PublicRoute><RegisterSport /></PublicRoute>} />
       <Route path="/appointment" element={<ProtectedRoute><Appointment /></ProtectedRoute>} />
       <Route path="/doctor/appointment" element={<ProtectedRoute><DoctorAppointment /></ProtectedRoute>} />
       <Route path="/profile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
