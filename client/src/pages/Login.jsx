@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, Checkbox, message } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { showLoading, hideLoading } from '../redux/features/alertSlice';
 import axios from 'axios';
@@ -70,7 +70,7 @@ const Login = () => {
             <div className="blurred-background"></div>
             <div className="content-wrapper">
                 <div className="logo"></div>
-                <div className="logo2"></div>
+                <Link className="logo2" to="/welcome" aria-label="Go to Welcome page"></Link>
                 <div className="main-container">
                     <div className="left-section">
                         <div className="tabs">

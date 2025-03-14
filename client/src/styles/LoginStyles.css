@@ -74,6 +74,14 @@
   top: 20px; /* Distance from the top edge */
   right: 20px; /* Distance from the right edge */
   z-index: 1000; /* Ensures it appears above other elements */
+  background-size: contain;
+  display: inline-block;
+  cursor: pointer; /* Indicate it’s clickable */
+  transition: transform 0.3s ease; /* Add smooth animation */
+}
+
+.logo2:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 
