@@ -19,6 +19,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import DoctorHomePage from './pages/doctors/DoctorHomePage';
 import AdminHomePage from './pages/admin/AdminHomePage';
+import Welcome from './pages/Welcome';// Import the Welcome component
 
 function App() {
   const {loading} = useSelector(state => state.alerts);
@@ -28,6 +29,7 @@ function App() {
     {loading ? <Spinner /> :
     <Routes>
       <Route path="/" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
+      <Route path="/welcome" element={<PublicRoute><Welcome /></PublicRoute>} />
       <Route path="/recruitment" element={<ProtectedRoute><ApplyDoctor/></ProtectedRoute>} />
       <Route path="/notification" element={<ProtectedRoute><NotificationPage/></ProtectedRoute>} />
       <Route path="/admin/users" element={<ProtectedRoute><Users/></ProtectedRoute>} />
@@ -43,6 +45,7 @@ function App() {
       <Route path="/reset-password/:token" element={<PublicRoute><ResetPassword /></PublicRoute>} />
       <Route path="/doctor/home" element={<ProtectedRoute><DoctorHomePage /></ProtectedRoute>} />
       <Route path="/admin/home" element={<ProtectedRoute><AdminHomePage /></ProtectedRoute>} />
+      <Route path="/welcome" element={<ProtectedRoute><Welcome /></ProtectedRoute>}/>
     </Routes>
     }
     </BrowserRouter>

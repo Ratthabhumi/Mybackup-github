@@ -1,0 +1,93 @@
+/* General Container Style */
+.welcome-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Buttons in the Top Right Corner */
+.top-right-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.right-corner-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none; /* No underline */
+    background-color: #3498db;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.right-corner-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Header Section */
+.main-header {
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.main-header p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+/* Sport and Hospital Section */
+.sport-section, .hospital-section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.sport-section h2, .hospital-section h2 {
+    font-size: 24px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.sport-section p, .hospital-section p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.login-register-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.login-register-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Section */
+.footer-section {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #95a5a6;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
