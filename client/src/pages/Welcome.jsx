@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Welcome.css';
 import { Link } from 'react-router-dom';
+import KMsport from "../images/KMsport.jpg";
+import Weight3 from '../images/Weight3.jpg';
+import Luuwing from '../images/Luuwing.jpg';
+
 
 const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 const Welcome = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const images = [
+        Weight3,KMsport,Luuwing
+    ];
+
+    const goToNextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    const goToPrevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    };
     return (
         <div className="welcome-container">
             <header>
@@ -35,9 +51,27 @@ const Welcome = () => {
                     </div>
                     <div className="sport-section">
                         <div className="section-images">
-                            <div className="sport-image1" aria-hidden="true"></div>
-                            <div className="sport-image2" aria-hidden="true"></div>
-                            <div className="sport-image3" aria-hidden="true"></div>
+                        <div className="slider-container">
+                        <button className="arrow left-arrow" onClick={goToPrevSlide}>
+                            &#8249;
+                        </button>
+                        <div
+                            className="slider-wrapper"
+                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                        >
+                            {images.map((image, index) => (
+                                <img
+                                    key={index}
+                                    src={image}
+                                    alt={`Slide ${index}`}
+                                    className="slider-image"
+                                />
+                            ))}
+                        </div>
+                        <button className="arrow right-arrow" onClick={goToNextSlide}>
+                            &#8250;
+                        </button>
+                    </div>
                         </div>
                         <div className="section-content">
                             <h2>Book your favorite sports court at KMITL Sport Center through our website! Whether it’s basketball, badminton, or gym, reserve your spot in just a few clicks. Stay active, skip the hassle, and enjoy seamless scheduling anytime, anywhere! Click below to create an account and queue with us.</h2>
@@ -64,9 +98,10 @@ const Welcome = () => {
                                     <span className="icon-contact" aria-hidden="true"></span>
                                 </div>
                                 <h3>Contacts</h3>
-                                <p><i className="fab fa-facebook"></i> ศูนย์การแพทย์ สจล. KMITL Medical center<br />
+                                <p><i className="fab fa-facebook"></i> ศูนย์การแพทย์ สจล. KMITL Medical center</p>
                                 <p><i className="fas fa-globe"></i>  <a href="http://medicalcenter.kmitl.ac.th/service/" target="_blank" rel="noopener noreferrer">http://medicalcenter.kmitl.ac.th/service/</a></p>
-                                <i className="fas fa-phone"></i> Tel: 02-3298145, 02 329 8000 - 9633</p>
+                                <p><i className="fas fa-phone"></i> Tel: 02-3298145, 02 329 8000 - 9633</p>
+
                             </div>
                             <div className="info-box">
                                 <div className="icon-circle">
