@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { showLoading, hideLoading } from '../redux/features/alertSlice';
 import axios from 'axios';
-import '../styles/LoginStyles.css';
+import '../styles/LoginSport.css';
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 
 const Login = () => {
@@ -61,13 +61,15 @@ const Login = () => {
     const handleTabSwitch = (tab) => {
         setActiveTab(tab);
         if (tab === 'register') {
-            navigate('/register'); // Navigate to the register page
+            navigate('/registersport');
+        } else if (tab === 'login') {
+            navigate('/loginsport');
         }
     };
 
     return (
         <div className="login-page">
-            <div className="blurred-background"></div>
+            <div className="blurred-background2"></div>
             <div className="content-wrapper">
                 <div className="logo"></div>
                 <div className="logo2"></div>
@@ -81,7 +83,7 @@ const Login = () => {
                                 Login
                             </button>
                             <button
-                                className={`sliding-btn ${activeTab === 'register' ? 'active' : ''}`}
+                                className={`sliding-btn ${activeTab === 'registers' ? 'active' : ''}`}
                                 onClick={() => handleTabSwitch('register')}
                             >
                                 Register
