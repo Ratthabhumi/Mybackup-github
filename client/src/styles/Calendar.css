@@ -82,6 +82,79 @@
 .card-body b {
   color: #222;
 }
+.ant-table-thead > tr > th {
+  background-color: #99DFED !important; /* Light blue */
+  color: #f9f9f9 !important; /* Black text */
+  font-weight: bold;
+}
+
+.ant-table-tbody > tr:nth-child(even) > td {
+  background-color: #f9f9f9; /* Slightly gray for alternate rows */
+}
+
+.ant-table-tbody > tr > td {
+  background-color: #fff; /* White for other rows */
+}
+
+.custom-table-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin: 0 auto;   /* Center the table within the container */
+}
+.custom-table {
+  border-collapse: collapse; /* Ensures borders are clean */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.custom-table th {
+  background-color: #b3e5fc; /* Light blue header */
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.custom-table td {
+  padding: 10px;
+  text-align: left;
+  background-color: #fff; /* White background for rows */
+}
+
+.custom-table tr:nth-child(even) td {
+  background-color: #f9f9f9; /* Slightly grey for alternate rows */
+}
+
+.custom-table .btn-success {
+  background-color: #4caf50; /* Green for "Approve" button */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-table .btn-danger {
+  background-color: #f44336; /* Red for "Reject" button */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.custom-table .btn-danger:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+.custom-table .btn-success:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+
 @media (max-width: 768px) {
   .card {
       max-width: 90%; /* Adjusts for smaller devices */
@@ -89,12 +162,20 @@
 }
 
 @media screen and (max-width: 768px) {
+  .custom-table td, .custom-table th {
+    font-size: 14px; /* Smaller font size for small screens */
+    padding: 8px;    /* Adjust padding for compact display */
+  }
   .ant-picker-calendar {
     width: 90%; /* Adjust width for tablets and small screens */
   }
 }
 
 @media screen and (max-width: 480px) {
+  .custom-table td, .custom-table th {
+    display: block;  /* Stack cells vertically for very small screens */
+    width: 100%;     /* Make each cell take up the full width */
+  }
   .ant-picker-calendar {
     width: 100%; /* Adjust width for mobile devices */
     font-size: 14px; /* Reduce font size for better readability */
