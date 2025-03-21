@@ -34,8 +34,17 @@ const Login = () => {
                     config
                 );
                 if (userRes.data.success) {
-                    navigate('/')
-					window.location.reload();
+                    const userData = userRes.data.data;
+                    if (userData.isAdmin) {
+                        navigate('/admin/home');
+                        window.location.reload();
+                    } else if (userData.isDoctor) {
+                        navigate('/doctor/home');
+                        window.location.reload();
+                    } else {
+                        navigate('/');
+                        window.location.reload();
+                    }
                 } else {
                     navigate('/');
                 }
@@ -61,8 +70,8 @@ const Login = () => {
             <div className="blurred-background"></div>
             <div className="content-wrapper">
 			<div className="logo-container">
-                <Link className="logo" to="/welcome" aria-label="Go to Welcome page"></Link>
-				<Link className="logo2" to="/welcome" aria-label="Go to Welcome page"></Link>
+            <Link className="logo" to="/welcome" aria-label="Go to Welcome page"></Link>
+            <Link className="logo2" to="/welcome" aria-label="Go to Welcome page"></Link>
 				</div>
                 <div className="main-container">
                     <div className="left-section">

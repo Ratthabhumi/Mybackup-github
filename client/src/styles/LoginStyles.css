@@ -240,6 +240,19 @@ color: #000;
   background: #7FCEC7;
 }
 
+.login-btn2 {
+  width: 70%;
+  height: 40px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 18px; /* Make the text more readable */
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 .additional-info {
   display: flex; /* Enables proper alignment */
   justify-content: flex-end; /* Pushes the text to the left */

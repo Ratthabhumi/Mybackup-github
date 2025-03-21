@@ -52,7 +52,7 @@ const Login = () => {
     const handleTabSwitch = (tab) => {
         setActiveTab(tab);
         if (tab === 'register') {
-            navigate('/register');
+            navigate('/registersport');
         }
     };
 
