@@ -83,6 +83,8 @@
   color: #222;
 }
 .ant-table-thead > tr > th {
+  font-size: 18px; /* Larger font size for headers */
+  font-family: 'Montserrat', sans-serif;
   background-color: #99DFED !important; /* Light blue */
   color: #f9f9f9 !important; /* Black text */
   font-weight: bold;
@@ -93,6 +95,8 @@
 }
 
 .ant-table-tbody > tr > td {
+  font-size: 16px; /* Larger font size for headers */
+  font-family: 'Montserrat', sans-serif;
   background-color: #fff; /* White for other rows */
 }
 
