@@ -72,7 +72,7 @@ const UserProfile = () => {
 	<Tabs className="custom-tabs" defaultActiveKey="1">
 	  <Tabs.TabPane tab="Profile" key="1">
 		{userInfo && (
-		  <div className="cardprofile">
+		  <div className="custom-calendar-container">
 		  <div className="ListofDoctors-button">Personal Details :</div>
 		  <Form
 			layout="vertical"
@@ -81,17 +81,36 @@ const UserProfile = () => {
 			initialValues={{
 			  name: userInfo.name,
 			  email: userInfo.email,
+			  lastname: userInfo.lastname,
+			  phone: userInfo.phone,
+			  address: userInfo.address,
 			}}
 		  >
 			<Row gutter={20}>
 			  <Col xs={24} md={24} lg={24}>
 				<Form.Item
-				  label="Name"
+				  label="First Name"
 				  name="name"
 				  className="form-item"
 				  rules={[{ required: true, message: "Name is required" }]}
 				>
 				  <Input placeholder="Enter your name" />
+				</Form.Item>
+				<Form.Item
+				  label="Last Name"
+				  name="lastname"
+				  className="form-item"
+				  rules={[{ required: true, message: "Name is required" }]}
+				>
+				  <Input placeholder="Enter your last name" />
+				</Form.Item>
+				<Form.Item
+				  label="Phone Number"
+				  name="phone"
+				  className="form-item"
+				  rules={[{ required: true, message: "Name is required" }]}
+				>
+				  <Input placeholder="08x-xxx-xxxx" />
 				</Form.Item>
 			  </Col>
 			  <Col xs={24} md={24} lg={24}>
@@ -102,6 +121,14 @@ const UserProfile = () => {
 				  rules={[{ required: true, message: "Email is required" }]}
 				>
 				  <Input type="email" placeholder="Enter your email" />
+				</Form.Item>
+				<Form.Item
+				  label="Address"
+				  name="address"
+				  className="form-item"
+				  rules={[{ required: true, message: "Name is required" }]}
+				>
+				  <Input placeholder="Enter your address" />
 				</Form.Item>
 			  </Col>
 			  <Col xs={24} md={24} lg={24}>

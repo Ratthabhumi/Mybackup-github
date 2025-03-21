@@ -207,10 +207,10 @@ const authController = async (req, res) => {
 
   const updateProfileController = async (req, res) => {
 	try {
-	  const { userId, name, email } = req.body;
+	  const { userId, name, lastname, phone, email, address } = req.body;
 	  const updatedUser = await userModel.findByIdAndUpdate(
 		userId,
-		{ name, email },
+		{ name, lastname, phone, email, address },
 		{ new: true }
 	  )
 	  updatedUser.password = undefined;
