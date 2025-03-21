@@ -144,8 +144,18 @@
   background-color: #f44336; /* Red for "Reject" button */
   color: white;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.custom-table .btn-primary  {
+  background-color: #006ACE; /* Red for "Reject" button */
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 20px;
   cursor: pointer;
   margin-left: 5px;
 }
