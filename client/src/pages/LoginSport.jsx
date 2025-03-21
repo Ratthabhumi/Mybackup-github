@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { showLoading, hideLoading } from '../redux/features/alertSlice';
 import axios from 'axios';
-import '../styles/LoginSport.css';
+import '../styles/LoginStyles.css';
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 
 const Login = () => {
@@ -34,17 +34,8 @@ const Login = () => {
                     config
                 );
                 if (userRes.data.success) {
-                    const userData = userRes.data.data;
-                    if (userData.isAdmin) {
-                        navigate('/admin/home');
-                        window.location.reload();
-                    } else if (userData.isDoctor) {
-                        navigate('/doctor/home');
-                        window.location.reload();
-                    } else {
-                        navigate('/');
-                        window.location.reload();
-                    }
+                    navigate('/')
+					window.location.reload();
                 } else {
                     navigate('/');
                 }
@@ -61,9 +52,7 @@ const Login = () => {
     const handleTabSwitch = (tab) => {
         setActiveTab(tab);
         if (tab === 'register') {
-            navigate('/registersport');
-        } else if (tab === 'login') {
-            navigate('/loginsport');
+            navigate('/register');
         }
     };
 
@@ -71,8 +60,10 @@ const Login = () => {
         <div className="login-page">
             <div className="blurred-background2"></div>
             <div className="content-wrapper">
-                <div className="logo"></div>
-                <Link className="logo2" to="/welcome" aria-label="Go to Welcome page"></Link>
+			<div className="logo-container">
+				<Link className="logo" to="/welcome" aria-label="Go to Welcome page"></Link>
+				<Link className="logo2" to="/welcome" aria-label="Go to Welcome page"></Link>
+				</div>
                 <div className="main-container">
                     <div className="left-section">
                         <div className="tabs">
@@ -83,7 +74,7 @@ const Login = () => {
                                 Login
                             </button>
                             <button
-                                className={`sliding-btn ${activeTab === 'registers' ? 'active' : ''}`}
+                                className={`sliding-btn ${activeTab === 'register' ? 'active' : ''}`}
                                 onClick={() => handleTabSwitch('register')}
                             >
                                 Register

@@ -34,17 +34,8 @@ const Login = () => {
                     config
                 );
                 if (userRes.data.success) {
-                    const userData = userRes.data.data;
-                    if (userData.isAdmin) {
-                        navigate('/admin/home');
-                        window.location.reload();
-                    } else if (userData.isDoctor) {
-                        navigate('/doctor/home');
-                        window.location.reload();
-                    } else {
-                        navigate('/');
-                        window.location.reload();
-                    }
+                    navigate('/')
+					window.location.reload();
                 } else {
                     navigate('/');
                 }
@@ -61,7 +52,7 @@ const Login = () => {
     const handleTabSwitch = (tab) => {
         setActiveTab(tab);
         if (tab === 'register') {
-            navigate('/register'); // Navigate to the register page
+            navigate('/register');
         }
     };
 
@@ -69,8 +60,10 @@ const Login = () => {
         <div className="login-page">
             <div className="blurred-background"></div>
             <div className="content-wrapper">
-                <div className="logo"></div>
-                <Link className="logo2" to="/welcome" aria-label="Go to Welcome page"></Link>
+			<div className="logo-container">
+                <Link className="logo" to="/welcome" aria-label="Go to Welcome page"></Link>
+				<Link className="logo2" to="/welcome" aria-label="Go to Welcome page"></Link>
+				</div>
                 <div className="main-container">
                     <div className="left-section">
                         <div className="tabs">

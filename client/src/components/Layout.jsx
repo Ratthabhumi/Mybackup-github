@@ -22,10 +22,10 @@ const Layout = ({children}) => {
 		<div className="layout">
 			<div className="sidebar">
 				<div className="logo3"></div>
-				<div className="logo-container">
+				<div className="logo-container2">
 					<div className="logo4"></div>
 					<h6>KMC - Hospital</h6>
-					</div>
+				</div>
 				<div className="menu">
 					{SidebarMenu.map((menu) => {
 						const isActive = location.pathname === menu.path

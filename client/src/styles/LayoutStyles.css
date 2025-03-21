@@ -36,6 +36,12 @@
 	background-color: white;
 }
 
+h6 {
+	font-size: 16px; /* Font size for the text */
+	font-weight: bold; /* Makes the text bold */
+	margin: 0; /* Removes default margins for proper alignment */
+	}
+
 .logo h6{
 	font-size: 1.5rem;
 	text-align: center;
@@ -210,3 +216,25 @@
   color: #000; /* Default black text color */
   transition: color 0.3s ease; /* Smooth transition effect */
 }
+
+.logo3 {
+	width: 120px;
+	height: 60px;
+	background: url('../images/Logowhite.png') no-repeat center center/contain;
+	margin: 10px auto; /* Reduce the top and bottom spacing */
+	position: relative; /* Enables positioning adjustments */
+	top: 0px; /* Moves it higher relative to its normal position */
+	}
+	
+.logo-container2 {
+	display: flex; /* Aligns logo and text horizontally */
+	align-items: center; /* Centers them vertically */
+	}
+	
+.logo4 {
+	width: 60px;
+	height: 60px;
+	background: url('../images/KQueLogowhite.png') no-repeat center center/contain; /* Example image */
+	margin-left: 30px; /* Moves the logo a bit to the left */
+	margin-right: 10px; /* Space between logo and text */
+	}
