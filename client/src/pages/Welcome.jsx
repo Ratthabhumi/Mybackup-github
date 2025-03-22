@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/Welcome.css';
 import { Link } from 'react-router-dom';
-import KMsport from "../images/KMsport.jpg";
-import Weight3 from '../images/Weight3.jpg';
-import Luuwing from '../images/Luuwing.jpg';
+import Hospital5 from "../images/Hospital5.jpg";
+import Hospital3 from '../images/Hospital3.jpg';
+import Hospital4 from '../images/Hospital4.jpg';
 
 
 const scrollToTop = () => {
@@ -13,7 +13,7 @@ const scrollToTop = () => {
 const Welcome = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const images = [
-        Weight3,KMsport,Luuwing
+        Hospital5,Hospital3,Hospital4
     ];
 
     const goToNextSlide = () => {
@@ -33,7 +33,6 @@ const Welcome = () => {
                     onClick={scrollToTop}
                 ></Link>
                 <div className="top-right-buttons">
-                    <Link to="/loginsport" className="right-corner-btn">KMITL Sport Center</Link>
                     <Link to="/login" className="right-corner-btn">KMC Hospital</Link>
                 </div>
             </header>
@@ -46,7 +45,7 @@ const Welcome = () => {
                         </div>
                         <div className="section-content">
                         <div className="kque-logo" aria-hidden="true"></div>
-                        <p>Queue management system for KMC Hospital and KMITL Sport World, allowing users to book, track, and manage appointments efficiently to reduce waiting times and get notified when it's your turn.</p>
+                        <p>Queue management system for KMC Hospital, allowing users to book, track, and manage appointments efficiently to reduce waiting times and get notified when it's your turn.</p>
                         </div>
                     </div>
                     <div className="sport-section">
@@ -74,8 +73,8 @@ const Welcome = () => {
                     </div>
                         </div>
                         <div className="section-content">
-                            <h2>Book your favorite sports court at KMITL Sport Center through our website! Whether it’s basketball, badminton, or gym, reserve your spot in just a few clicks. Stay active, skip the hassle, and enjoy seamless scheduling anytime, anywhere! Click below to create an account and queue with us.</h2>
-                            <Link to="/loginsport" className="login-register-btn">Login / Register</Link>
+                            <h2>Book your spot in the KMC Hospital queue effortlessly through our website! Skip the long waits and manage your appointment with ease. With just a few clicks, secure your place and receive timely updates. Click below to create an account and queue with us.</h2>
+                            <Link to="/login" className="login-register-btn">Login / Register</Link>
                         </div>
                     </div>
 
@@ -113,7 +112,6 @@ const Welcome = () => {
                             </div>
 
                         </div>
-                        <Link to="/login" className="login-register-btn hospital-btn">Login / Register</Link>
                     </div>
                 </section>
             </main>
