@@ -40,8 +40,9 @@ const ApplyDoctor = () => {
   return (
 	<Layout>
 		<div className="ListofDoctors-button">Doctor Recruitment</div>
+		<div className="custom-calendar-container">
 		<Form layout="vertical" onFinish={handleFinish} className="m-3">
-		<h4 className="">Personal Details :</h4>
+		<div className="PersonalDetail-button">Personal Details :</div>
 			<Row gutter={20}>
 				<Col xs={24} md={24} lg={8}>
 					<Form.Item label="First Name" name="firstName" required rules={[{required: true}]}>
@@ -69,7 +70,7 @@ const ApplyDoctor = () => {
 					</Form.Item>
 				</Col>
 			</Row>
-		<h4 className="">Professional Details :</h4>
+			<div className="PersonalDetail-button">Professional Details :</div>
 			<Row gutter={20}>
 				<Col xs={24} md={24} lg={8}>
 					<Form.Item label="Specialization" name="specialization" required rules={[{required: true}]}>
@@ -101,6 +102,7 @@ const ApplyDoctor = () => {
 				</Col>
 			</Row>
 		</Form>
+		</div>
 	</Layout>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Layout from '../components/Layout'
+import UserLayout from '../components/UserLayout'
 import dayjs from 'dayjs'
 import { Table, message } from 'antd'
 import '../styles/Calendar.css';
@@ -99,10 +99,10 @@ const Appointment = () => {
 	]
 
   return (
-	<Layout>
+	<UserLayout>
 		<div className="ListofDoctors-button">Appointment Lists</div>
 		<Table className="custom-table" columns={columns} dataSource={appointment} />
-	</Layout>
+	</UserLayout>
   )
 }
 

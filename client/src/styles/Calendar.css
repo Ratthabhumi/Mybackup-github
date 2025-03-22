@@ -26,6 +26,21 @@
   margin-top: 10px;
 }
 
+.PersonalDetail-button {
+  background-color: #ADE8F4;
+  color: #474747;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .appointment {
   background: #ADE8F4;
   margin-bottom: 2px;
@@ -47,6 +62,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   transition: transform 0.2s, box-shadow 0.2s;
+  margin-left: 15px;
   cursor: pointer;
 }
 
@@ -62,7 +78,6 @@
   font-weight: bold;
   color: #333333;
   background-color: #ADE8F4;
-  border-bottom: 2px solid #ddd;
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -72,10 +87,6 @@
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   color: #555;
-}
-
-.card-body p {
-  margin: 0.5rem 0;
 }
 
 /* Bold labels */
@@ -184,7 +195,7 @@
 
 /* Input field styling */
 .cardprofile .form-item input {
-  width: 100%; /* Full width input */
+  width: 10px; /* Full width input */
   padding: 10px; /* Input padding */
   border: 1px solid #ddd; /* Light gray border */
   border-radius: 5px; /* Rounded corners */
@@ -200,7 +211,7 @@
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   font-size: 16px; /* Font size */
-  width: 100%; /* Full width button */
+  width: 10px; /* Full width button */
 }
 
 /* Button hover effect */

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Tabs, Calendar, Row } from 'antd';
+import { Tabs, Calendar, Row, } from 'antd';
 import axios from 'axios';
+import '../styles/LayoutStyles.css';
 import DoctorList from '../components/DoctorList';
 import UserLayout from '../components/UserLayout';
 import dayjs from 'dayjs';
 const { TabPane } = Tabs;
+
 
 const HomePage = () => {
 
