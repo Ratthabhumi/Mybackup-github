@@ -387,6 +387,7 @@ color: #000;
   color: #ccc; /* Optional: Adjust color if needed */
 }
 
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .main-container {

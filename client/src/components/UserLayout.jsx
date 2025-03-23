@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { Badge, message } from 'antd';
 import axios from 'axios';
 import dayjs from 'dayjs';
+import Logo from '../images/Logo.png';
 
 const UserLayout = ({ children }) => {
   const { user } = useSelector((state) => state.user);
@@ -108,17 +109,20 @@ const UserLayout = ({ children }) => {
           }}
         >
           <div className="header">
-            <div className="header-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px' }}>
-            <div className="appointment-details">
-                {nextAppointment ? (
-                  <>
-                    <div>
-                      Next appointment at: {dayjs(nextAppointment.date).format('DD-MM-YYYY')} {dayjs(nextAppointment.time).format('HH:mm')} with Dr. {nextAppointment.doctorInfo.firstName} {nextAppointment.doctorInfo.lastName}
-                    </div>
-                    <div>
-                      Queue: {queueCount} appointment{queueCount === 1 ? "" : "s"} before you
-                    </div>
-                  </>
+                        <div className="header-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px' }}>
+                          <div className="appointment-details">
+                            {nextAppointment ? (
+                              <div className="appointment-details-container">
+                              <Link className="logoheader" to="/" aria-label="Go to Welcome page">
+                                <img src={Logo} alt="Logo" className="logo-image" />
+                              </Link>
+                              <span className="reminder-text">
+                              Reminders : {dayjs(nextAppointment.date).format('DD-MM-YYYY')} {dayjs(nextAppointment.time).format('HH:mm')} with Dr. {nextAppointment.doctorInfo.firstName} {nextAppointment.doctorInfo.lastName}
+                              </span>
+                              <div className="queue-info">
+                                Queue: {queueCount} appointment{queueCount === 1 ? "" : "s"} before you.
+                              </div>
+                            </div>
                 ) : (
                   <div>No upcoming appointments</div>
                 )}
@@ -128,9 +132,9 @@ const UserLayout = ({ children }) => {
                   <i className="fa-solid fa-bell"></i>
                 </Badge>
                 {user?.isDoctor ? (
-                  <Link to={`/doctor/profile`} style={{ marginLeft: '10px' }}>{user?.name}</Link>
+                  <Link to={`/doctor/profile`} className="user-link">{user?.name}</Link>
                 ) : (
-                  <Link to="/profile" style={{ marginLeft: '10px' }}>{user?.name}</Link>
+                  <Link to="/profile" className="user-link">{user?.name}</Link>
                 )}
               </div>
             </div>
