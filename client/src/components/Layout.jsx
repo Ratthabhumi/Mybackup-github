@@ -148,7 +148,7 @@ const Layout = ({ children }) => {
         className={`toggle-btn ${isSidebarVisible ? 'sidebar-visible' : 'sidebar-hidden'}`}
         onClick={toggleSidebar}
       >
-        {isSidebarVisible ? 'Hide Sidebar' : 'Show Sidebar'}
+        {isSidebarVisible ? '← Hide Sidebar' : 'Show Sidebar →'}
       </button>
     </>
   );
