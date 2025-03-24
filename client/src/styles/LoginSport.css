@@ -92,56 +92,6 @@ transition: transform 0.3s ease;
   position: relative; /* Enables positioning adjustments */
   top: 0px; /* Moves it higher relative to its normal position */
   }
-.tabs {
-display: flex;
-position: relative;
-margin-bottom: 20px;
-justify-content: center;
-align-items: center;
-background-color: #f0f0f0;
-border-radius: 25px;
-padding: 5px;
-width: 240px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-margin-top: 0; /* Ensure there's no top margin */
-}
-
-.sliding-btn {
-width: 120px;
-height: 40px;
-font-size: 16px;
-line-height: 1px; /* Ensures vertical alignment of text */
-color: #000000;
-text-align: center; /* Centers the text horizontally */
-background-color: transparent;
-border: none;
-border-radius: 25px;
-cursor: pointer;
-z-index: 1;
-transition: color 0.3s ease;
-}
-
-.sliding-btn.active {
-color: #000000;
-z-index: 2; /* Ensures the text is above the slider */
-}
-
-.slider {
-position: absolute;
-top: 0;
-left: 0;
-width: 120px;
-height: 100%;
-background-color: #4CB6AC;
-border-radius: 25px;
-transition: left 0.3s ease;
-z-index: 0; /* Ensures it's behind the buttons */
-}
-
-.active-tab {
-background: #4CB6AC;
-color: #000;
-}
 
 .welcome-message {
   font-family: 'Montserrat', sans-serif;
@@ -258,16 +208,6 @@ color: #000;
 .forgot-password-btn:hover {
   color: #4CB6AC; /* Green color on hover */
 }
-
-
-/* Align the checkbox to the right corner */
-.terms-checkbox {
-  display: flex; /* Enables proper alignment */
-  justify-content: flex-start; /* Pushes the checkbox and text to the right */
-  font-family: 'Montserrat', sans-serif;
-}
-/* Add these styles to your existing LoginStyles.css file */
-/* Add these styles to your existing LoginStyles.css file */
 
 .info-row {
   display: flex;
@@ -426,12 +366,7 @@ color: #000;
   right: 0px; /* Adjust distance from the right edge */
 }
 
-/* Make the tabs buttons larger and more mobile-friendly */
-.sliding-btn {
-  width: 100%;
-  font-size: 18px; /* Make button text bigger */
-  padding: 10px 0;
-}
+
 
 /* Adjust input field size */
 .ant-input, .ant-input-password {
@@ -445,11 +380,6 @@ color: #000;
   font-size: 18px; /* Make the button bigger */
 }
 
-/* Make checkbox and terms more readable */
-.terms-checkbox {
-  font-size: 14px; /* Adjust text size */
-  padding: 10px 0;
-}
 
 /* Make welcome message more readable */
 .welcome-message {

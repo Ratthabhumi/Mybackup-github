@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 /* General page styles */
 .login-page {
   display: flex;
@@ -100,18 +101,20 @@ position: relative;
 margin-bottom: 20px;
 justify-content: center;
 align-items: center;
-background-color: #f0f0f0;
+background-color: #f0f0f0b4;
 border-radius: 25px;
 padding: 5px;
 width: 240px;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 margin-top: 0; /* Ensure there's no top margin */
+font-size: 16px;
+font-family: 'Montserrat';
 }
 
 .sliding-btn {
 width: 120px;
 height: 40px;
-font-size: 16px;
+font-size: 18px !important;
 line-height: 1px; /* Ensures vertical alignment of text */
 color: #000000;
 text-align: center; /* Centers the text horizontally */
@@ -274,14 +277,20 @@ color: #000;
   color: #4CB6AC; /* Green color on hover */
 }
 
-
+/* Ensure the font is applied correctly to the terms-checkbox */
+.login-page .terms-checkbox {
+  display: flex; /* Enables proper alignment */
+  justify-content: flex-start; /* Aligns the checkbox and text to the left */
+  font-family: 'Montserrat', sans-serif !important; /* Apply Montserrat font */
+  font-size: 14px; /* Adjust font size as needed */
+  color: #333; /* Adjust text color as needed */
+}
 /* Align the checkbox to the right corner */
 .terms-checkbox {
   display: flex; /* Enables proper alignment */
   justify-content: flex-start; /* Pushes the checkbox and text to the right */
   font-family: 'Montserrat', sans-serif;
 }
-/* Add these styles to your existing LoginStyles.css file */
 /* Add these styles to your existing LoginStyles.css file */
 
 .info-row {
@@ -387,6 +396,10 @@ color: #000;
   color: #ccc; /* Optional: Adjust color if needed */
 }
 
+.info-btn {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -442,13 +455,6 @@ color: #000;
   right: 0px; /* Adjust distance from the right edge */
 }
 
-/* Make the tabs buttons larger and more mobile-friendly */
-.sliding-btn {
-  width: 100%;
-  font-size: 18px; /* Make button text bigger */
-  padding: 10px 0;
-}
-
 /* Adjust input field size */
 .ant-input, .ant-input-password {
   font-size: 16px;
@@ -459,12 +465,6 @@ color: #000;
   width: 100%;
   height: 50px;
   font-size: 18px; /* Make the button bigger */
-}
-
-/* Make checkbox and terms more readable */
-.terms-checkbox {
-  font-size: 14px; /* Adjust text size */
-  padding: 10px 0;
 }
 
 /* Make welcome message more readable */

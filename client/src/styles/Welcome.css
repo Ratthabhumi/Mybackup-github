@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
@@ -287,6 +287,7 @@ a:hover {
 
 /* Button styling */
 .login-register-btn {
+    font-family: 'Montserrat', sans-serif;
     display: inline-block;
     background-color: #ff7f2a;
     color: #fff;

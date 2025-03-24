@@ -143,27 +143,10 @@
   color: #222;
 }
 
-.ant-table-thead > tr > th {
-  font-size: 18px; /* Larger font size for headers */
-  font-family: 'Montserrat', sans-serif;
-  background-color: #99DFED !important; /* Light blue */
-  color: #f9f9f9 !important; /* Black text */
-  font-weight: bold;
-}
-
-.ant-table-tbody > tr:nth-child(even) > td {
-  background-color: #f9f9f9; /* Slightly gray for alternate rows */
-}
-
-.ant-table-tbody > tr > td {
-  font-size: 16px; /* Larger font size for headers */
-  font-family: 'Montserrat', sans-serif;
-  background-color: #fff; /* White for other rows */
-}
-
 .custom-table-container {
   overflow-x: auto; /* Enable horizontal scrolling */
   margin: 0 auto;   /* Center the table within the container */
+  width: 100%; /* Default width */
 }
 .custom-table {
   border-collapse: collapse; /* Ensures borders are clean */
@@ -176,6 +159,11 @@
 }
 
 .custom-table th {
+  font-size: 18px; /* Larger font size for headers */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #99DFED !important; /* Light blue */
+  color: #f9f9f9 !important; /* Black text */
+  font-weight: bold;
   background-color: #b3e5fc; /* Light blue header */
   padding: 10px;
   text-align: left;
@@ -281,16 +269,27 @@
 }
 
 @media screen and (max-width: 768px) {
+  .custom-table-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .custom-table {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .custom-table th, .custom-table td {
-    font-size: 14px; /* Smaller font size for small screens */
-    padding: 8px;    /* Adjust padding for compact display */
+    padding: 8px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for better fit */
+  }
+
+  .custom-table .btn-success, .custom-table .btn-danger, .custom-table .btn-primary {
+    padding: 5px 15px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for better fit */
   }
   .card {
       width: 130%;
-  }
-  .custom-table th, .custom-table td {
-    font-size: 14px; /* Smaller font size for small screens */
-    padding: 8px;    /* Adjust padding for compact display */
   }
   .ant-picker-calendar {
     width: 100%; /* Adjust width for mobile devices */
@@ -306,42 +305,21 @@
 
 @media screen and (max-width: 480px) {
   .custom-table-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100%; /* Adjust width for smaller screens */
   }
 
-  .card {
-    max-width: 200%; /* Adjusts for smaller devices */
-}
   .custom-table {
-    width: 50%; /* Ensure table takes full width */
-    display: table; /* Ensure table layout */
+    width: 95%; /* Adjust width for smaller screens */
   }
 
   .custom-table th, .custom-table td {
-    display: table-cell; /* Ensure cells do not stack vertically */
     padding: 5px; /* Adjust padding for smaller screens */
     font-size: 12px; /* Smaller font size for better fit */
   }
 
-  .custom-table th {
-    background-color: #4f4f4f; /* Light blue header */
-    font-weight: bold;
-    text-align: left;
-  }
-
-  .custom-table td {
-    background-color: #fff; /* White background for rows */
-    text-align: left;
-    border-bottom: 1px solid #ddd; /* Add a border between cells */
-  }
-
-  .custom-table tr {
-    margin-bottom: 0; /* Remove space between rows */
-  }
-
-  .custom-table .btn-danger {
-    width: 100%; /* Make button full width */
-    margin: 10px 0; /* Add margin for spacing */
+  .custom-table .btn-success, .custom-table .btn-danger, .custom-table .btn-primary {
+    padding: 5px 10px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Smaller font size for better fit */
   }
   .ant-picker-calendar {
     width: 100%; /* Adjust width for mobile devices */
@@ -354,4 +332,7 @@
     border-radius: 4px;
     height: auto;
   }
+  .card {
+    max-width: 200%; /* Adjusts for smaller devices */
+}
 }

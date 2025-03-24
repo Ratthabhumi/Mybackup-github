@@ -134,7 +134,7 @@ const Register = () => {
                             </div>
                             <Form.Item className="terms-checkbox">
                                 <Checkbox onChange={(e) => setAcceptedTerms(e.target.checked)}>
-                                    I agree to all Terms and Conditions.
+                                <span className="terms-checkbox">I agree to all Terms and Conditions.</span>
                                 </Checkbox>
                             </Form.Item>
                             <button className="login-btn" type="submit">

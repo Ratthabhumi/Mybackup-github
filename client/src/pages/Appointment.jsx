@@ -101,12 +101,14 @@ const Appointment = () => {
   return (
 	<UserLayout>
 		<div className="ListofDoctors-button">Appointment Lists</div>
+		<div className="custom-table-container">
 		<Table
 			className="custom-table"
 			columns={columns}
 			dataSource={appointment}
 			scroll={{ x: '100%' }} // Enable horizontal scroll for responsiveness
 			/>
+			</div>
 	</UserLayout>
   )
 }

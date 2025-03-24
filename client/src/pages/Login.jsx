@@ -127,11 +127,11 @@ const Login = () => {
                                     <Checkbox
                                         onChange={(e) => setAcceptedTerms(e.target.checked)}
                                     >
-                                        I agree to all Terms and Conditions.
+                                        <span className="terms-checkbox">I agree to all Terms and Conditions.</span>
                                     </Checkbox>
                                 </Form.Item>
                                 <button className="login-btn" type="submit">
-                                    Login
+                                <span className="info-btn">Login</span>
                                 </button>
                             </Form>
                         )}
