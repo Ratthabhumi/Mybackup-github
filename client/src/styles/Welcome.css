@@ -31,14 +31,16 @@ a:hover {
 .logowelcome {
     width: 120px;
     height: 60px;
-    background: url('../images/Logo.png') no-repeat center center;
+    background: url('../images/Logowhite.png') no-repeat center center;
     background-size: contain;
     position: fixed;
     top: 20px;
-    left: 1px;
     z-index: 1000;
     cursor: pointer;
     transition: transform 0.3s;
+    position: fixed; /* Changed to fixed */
+    right: 20px;
+    display: flex;
 }
 
 .logowelcome:hover {

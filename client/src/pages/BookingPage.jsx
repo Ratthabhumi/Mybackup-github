@@ -103,7 +103,7 @@ const BookingPage = () => {
   return (
 	<Layout>
     <div className="ListofDoctors-button">Booking Page</div>
-        <div className="card">
+        <div className="doccard">
             {doctor && (
                 <>
                     <div className="doccard-header">

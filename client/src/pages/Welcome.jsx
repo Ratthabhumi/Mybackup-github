@@ -32,9 +32,6 @@ const Welcome = () => {
                     aria-label="Go to Welcome page"
                     onClick={scrollToTop}
                 ></Link>
-                <div className="top-right-buttons">
-                    <Link to="/login" className="right-corner-btn">KMC Hospital</Link>
-                </div>
             </header>
 
             <main>

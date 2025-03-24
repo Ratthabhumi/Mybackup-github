@@ -9,12 +9,18 @@
 
 .sidebar{
 	min-height: 100%;
-	width: 300px;
 	border-radius: 5px;
-	background-color: #8ec9c6;
-	box-shadow: 0 0 2px grey;
 	margin-right: 20px;
+	width: 250px;
+	background-color: #77c6c2;
+	box-shadow: 0 0 2px grey;
 	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	transition: width 0.3s ease, visibility 0.3s ease;
+	z-index: 999;
 }
 
 .content{
@@ -270,23 +276,6 @@ h6 {
   transform: scale(1.05); /* Slightly enlarge tab for hover effect */
 }
 
-.sidebar {
-	width: 250px;
-	background-color: #8ec9c6;
-	box-shadow: 0 0 2px grey;
-	color: white;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	transition: width 0.3s ease, visibility 0.3s ease;
-	z-index: 999;
-  }
-  
-  .sidebar.hidden {
-	width: 0;
-	visibility: hidden;
-  }
   
   .content {
 	transition: margin-left 0.3s ease;
