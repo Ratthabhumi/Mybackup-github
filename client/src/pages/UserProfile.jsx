@@ -73,6 +73,7 @@ const UserProfile = () => {
 	<Tabs className="custom-tabs" defaultActiveKey="1">
 	  <Tabs.TabPane tab="Profile" key="1">
 		{userInfo && (
+		<div className="custom-calendar-container">
 		  <div>
 		  <div className="ListofDoctors-button">Personal Details :</div>
 		  <Form
@@ -140,10 +141,12 @@ const UserProfile = () => {
 			</Row>
 		  </Form>
 		</div>		
+		</div>
 		)}
 	  </Tabs.TabPane>
 	  <Tabs.TabPane tab="Change Password" key="2">
-		<Form layout="vertical" onFinish={handlePasswordFinish} className="m-3">
+		<Form layout="vertical" onFinish={handlePasswordFinish}>
+		<div className="custom-calendar-container">
 		  <Row gutter={20}>
 			<Col xs={24} md={24} lg={8}>
 			  <Form.Item
@@ -152,9 +155,6 @@ const UserProfile = () => {
 				rules={[{ required: true, message: 'Current password is required' }]}
 			  >
 				<Input.Password placeholder="Enter current password" />
-				<button type="submit" className="btn btn-primary form-btn">
-				Confirm
-			  </button>
 			  </Form.Item>
 			</Col>
 			<Col xs={24} md={24} lg={8}>
@@ -186,7 +186,11 @@ const UserProfile = () => {
 				<Input.Password placeholder="Confirm new password" />
 			  </Form.Item>
 			</Col>
+			<button type="submit" className="btn3 btn3-primary form-btn">
+				Confirm
+			  </button>
 		  </Row>
+		</div>
 		</Form>
 	  </Tabs.TabPane>
 	</Tabs>

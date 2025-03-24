@@ -212,6 +212,7 @@ const Profile = () => {
         </Tabs.TabPane>
         <Tabs.TabPane tab="Change Password" key="2">
           <Form layout="vertical" onFinish={handlePasswordFinish} className="m-3">
+          <div className="custom-calendar-container">
             <Row gutter={20}>
               <Col xs={24} md={24} lg={8}>
                 <Form.Item
@@ -257,6 +258,7 @@ const Profile = () => {
                 </button>
               </Col>
             </Row>
+            </div>
           </Form>
         </Tabs.TabPane>
       </Tabs>

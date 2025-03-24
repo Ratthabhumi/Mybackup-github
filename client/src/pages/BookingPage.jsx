@@ -7,6 +7,7 @@ import dayjs from 'dayjs';
 import { useDispatch, useSelector } from 'react-redux';
 import {showLoading, hideLoading} from '../redux/features/alertSlice'
 
+
 const BookingPage = () => {
 	const {user} = useSelector(state => state.user)
 	const params = useParams();

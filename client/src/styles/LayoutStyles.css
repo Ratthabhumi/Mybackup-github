@@ -254,6 +254,7 @@ h6 {
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
+  
 }
 
 .btn-primary {
@@ -281,6 +282,26 @@ h6 {
   transform: scale(1.05); /* Slightly enlarge tab for hover effect */
 }
 
+.btn3 {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: -3px; /* Adjust the value as needed to move the button up */
+  }
+  
+  .btn3-primary {
+	background-color: #ADE8F4; /* Default color */
+	color: rgb(23, 23, 23);
+	transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .btn3-primary:hover {
+	background-color: #6ED2E6; /* Darker color for hover effect */
+	color: rgb(23, 23, 23);
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
   
   .content {
 	transition: margin-left 0.3s ease;
@@ -476,7 +497,7 @@ h6 {
 	.reminder-text {
 		display: inline-block;
 		vertical-align: middle;
-		margin-left: 200px;
+		margin-left: 205px;
 	  }
   }
   

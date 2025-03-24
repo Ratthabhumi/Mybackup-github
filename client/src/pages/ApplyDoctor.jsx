@@ -41,6 +41,7 @@ const ApplyDoctor = () => {
 	<Layout>
 		<div className="ListofDoctors-button">Doctor Recruitment</div>
 		<Form layout="vertical" onFinish={handleFinish} className="m-3">
+		<div className="custom-calendar-container">
 		<div className="PersonalDetail-button">Personal Details :</div>
 			<Row gutter={20}>
 				<Col xs={24} md={24} lg={8}>
@@ -100,6 +101,7 @@ const ApplyDoctor = () => {
 				<button type="submit" className="btn btn-primary form-btn">Submit</button>
 				</Col>
 			</Row>
+			</div>
 		</Form>
 	</Layout>
   )

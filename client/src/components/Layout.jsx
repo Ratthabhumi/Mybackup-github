@@ -124,7 +124,13 @@ const Layout = ({ children }) => {
                     </div>
                   </div>
                   ) : (
-                    <div>No upcoming appointments</div>
+                    <div className="appointment-details-container">
+                      <Link className="logoheader" to="/" aria-label="Go to Welcome page">
+                        <img src={Logo} alt="Logo" className="logo-image" />
+                      </Link>
+                      <span className="reminder-text">
+                      No upcoming appointments</span>
+                    </div>
                   )}
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>

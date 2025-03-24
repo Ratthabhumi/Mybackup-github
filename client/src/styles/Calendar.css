@@ -98,8 +98,8 @@
 
 /* General container styles */
 .doccard {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 20px auto; /* Center the card and add vertical margin */
+  padding: 10px; /* Add padding inside the card */
   border-radius: 8px;
   font-family: 'Montserrat', sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -107,6 +107,7 @@
   transition: transform 0.2s, box-shadow 0.2s;
   margin-left: 15px;
   cursor: pointer;
+  max-width: 85%; /* Set a maximum width for the card */
 }
 
 .doccard:hover {
@@ -116,12 +117,14 @@
 
 /* Header styles */
 .doccard-header {
+  padding: 0.5rem; /* Add padding around the header */
   font-size: 1.5rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #333333;
   background-color: #ADE8F4;
-  padding-bottom: 0.5rem;
+  width: 100%; /* Ensure the header takes full width */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
   margin-bottom: 0.5rem;
 }
 
@@ -265,13 +268,12 @@
 
 .custom-calendar-container {
   padding: 20px;
-  width: 80%; /* Optional for consistent layout */
-  height: 600px; /* Define a fixed height */
+  width: 95%; /* Optional for consistent layout */
+  height: 90%; /* Define a fixed height */
   margin: 0 auto;
   background: #fcfcfc;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  overflow: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -287,7 +289,14 @@
     padding: 8px;    /* Adjust padding for compact display */
   }
   .ant-picker-calendar {
-    width: 50%; /* Adjust width for tablets and small screens */
+    width: 100%; /* Adjust width for mobile devices */
+    font-size: 14px; /* Reduce font size for better readability */
+  }
+  .custom-calendar-container {
+    padding: 5px;
+    width: 100%; /* Optional for consistent layout */
+    box-shadow: none;
+    border-radius: 4px;
   }
 }
 
@@ -331,12 +340,12 @@
     margin: 10px 0; /* Add margin for spacing */
   }
   .ant-picker-calendar {
-    width: 80%; /* Adjust width for mobile devices */
+    width: 100%; /* Adjust width for mobile devices */
     font-size: 14px; /* Reduce font size for better readability */
   }
   .custom-calendar-container {
     padding: 5px;
-    max-width: 80%;
+    width: 100%; /* Optional for consistent layout */
     box-shadow: none;
     border-radius: 4px;
   }
