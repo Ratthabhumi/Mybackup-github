@@ -57,6 +57,8 @@
 
 /* General container styles */
 .card {
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 8px;
   font-family: 'Montserrat', sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -231,31 +233,43 @@
 }
 
 @media screen and (max-width: 768px) {
-  .custom-calendar-container {
-    padding: 10px;
-    max-width: 100%;
+  .custom-table th, .custom-table td {
+    font-size: 14px; /* Smaller font size for small screens */
+    padding: 8px;    /* Adjust padding for compact display */
   }
   .card {
-      max-width: 90%; /* Adjusts for smaller devices */
+      max-width: 100%; /* Adjusts for smaller devices */
   }
   .custom-table th, .custom-table td {
     font-size: 14px; /* Smaller font size for small screens */
     padding: 8px;    /* Adjust padding for compact display */
   }
   .ant-picker-calendar {
-    width: 90%; /* Adjust width for tablets and small screens */
+    width: 50%; /* Adjust width for tablets and small screens */
   }
 }
 
 @media screen and (max-width: 480px) {
+  .custom-table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+
+  .card {
+    max-width: 100%; /* Adjusts for smaller devices */
+}
+  .custom-table {
+    width: 50%; /* Ensure table takes full width */
+    display: table; /* Ensure table layout */
+  }
+
   .custom-table th, .custom-table td {
-    display: block;  /* Stack cells vertically for very small screens */
-    width: 100%;     /* Make each cell take up the full width */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: table-cell; /* Ensure cells do not stack vertically */
+    padding: 5px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Smaller font size for better fit */
   }
 
   .custom-table th {
-    background-color: #b3e5fc; /* Light blue header */
+    background-color: #4f4f4f; /* Light blue header */
     font-weight: bold;
     text-align: left;
   }
@@ -263,11 +277,11 @@
   .custom-table td {
     background-color: #fff; /* White background for rows */
     text-align: left;
-    border-bottom: 1px solid #ddd; /* Add a border between stacked cells */
+    border-bottom: 1px solid #ddd; /* Add a border between cells */
   }
 
   .custom-table tr {
-    margin-bottom: 10px; /* Add space between rows */
+    margin-bottom: 0; /* Remove space between rows */
   }
 
   .custom-table .btn-danger {
@@ -275,12 +289,12 @@
     margin: 10px 0; /* Add margin for spacing */
   }
   .ant-picker-calendar {
-    width: 100%; /* Adjust width for mobile devices */
+    width: 80%; /* Adjust width for mobile devices */
     font-size: 14px; /* Reduce font size for better readability */
   }
   .custom-calendar-container {
     padding: 5px;
-    max-width: 100%;
+    max-width: 80%;
     box-shadow: none;
     border-radius: 4px;
   }

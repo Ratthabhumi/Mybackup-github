@@ -255,7 +255,6 @@ h6 {
   background-color: #6ED2E6; /* Darker color for hover effect */
   color: rgb(23, 23, 23);
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  transform: scale(1.05); /* Slightly enlarge tab for hover effect */
 }
 
 .btn-primary2 {
@@ -368,6 +367,25 @@ h6 {
   }
 
   @media (max-width: 768px) {
+	.header-content .ant-badge,
+  .header-content .fa-solid.fa-bell,
+  .user-link {
+   display: none !important; /* remove the user name link */
+    }
+  
+    /* 3) Make reminders & queue text smaller or wrap so it fits */
+    .reminder-text, .queue-info {
+   font-size: 14px; /* slightly smaller text to fit on phone */
+   margin-left: 5px; 
+   margin-right: 5px; 
+   display: block; /* stack them if needed */
+    }
+  
+    /* If you want the entire 'appointment-details-container' to wrap better: */
+    .appointment-details-container {
+   flex-wrap: wrap; 
+   gap: 5px;
+    }
 	.header-content {
 		justify-content: space-between;
 		padding: 0 10px;
@@ -464,7 +482,7 @@ h6 {
 	.reminder-text {
 		display: inline-block;
 		vertical-align: middle;
-		margin-left: 184px;
+		margin-left: 200px;
 	  }
   }
   
