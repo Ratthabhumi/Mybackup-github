@@ -106,10 +106,10 @@ const BookingPage = () => {
         <div className="card">
             {doctor && (
                 <>
-                    <div className="card-header">
+                    <div className="doccard-header">
                         Dr. {doctor.firstName} {doctor.lastName}
                     </div>
-                    <div className="card-body">
+                    <div className="doccard-body">
                         <p><b>Specialization:</b> {doctor.specialization}</p>
                         <p><b>Phone:</b> {doctor.phone}</p>
                         <p><b>Email:</b> {doctor.email}</p>
