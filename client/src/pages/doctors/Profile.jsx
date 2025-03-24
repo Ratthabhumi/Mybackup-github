@@ -96,6 +96,7 @@ const Profile = () => {
       <Tabs className="custom-tabs" defaultActiveKey="1">
         <Tabs.TabPane tab="Profile" key="1">
           {doctor && (
+            <div className="custom-calendar-container">
             <Form
               layout="vertical"
               onFinish={handleProfileFinish}
@@ -206,6 +207,7 @@ const Profile = () => {
                 </Col>
               </Row>
             </Form>
+            </div>
           )}
         </Tabs.TabPane>
         <Tabs.TabPane tab="Change Password" key="2">

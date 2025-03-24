@@ -40,7 +40,6 @@ const ApplyDoctor = () => {
   return (
 	<Layout>
 		<div className="ListofDoctors-button">Doctor Recruitment</div>
-		<div className="custom-calendar-container">
 		<Form layout="vertical" onFinish={handleFinish} className="m-3">
 		<div className="PersonalDetail-button">Personal Details :</div>
 			<Row gutter={20}>
@@ -102,7 +101,6 @@ const ApplyDoctor = () => {
 				</Col>
 			</Row>
 		</Form>
-		</div>
 	</Layout>
   )
 }

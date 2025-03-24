@@ -54,9 +54,7 @@ const AdminHomePage = () => {
   return (
     <Layout>
       <div className="calendar-button">Calendar</div>
-      <div 
-				className="custom-calendar-container" >
-      <Calendar cellRender={cellRender} /></div>
+      <Calendar cellRender={cellRender} />
     </Layout>
   );
 };

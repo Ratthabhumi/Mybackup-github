@@ -31,12 +31,6 @@
 	background-color: white;
 }
 
-.body{
-	height: 85vh;
-	margin-bottom: 20px;
-	box-shadow: 0 0 2px grey;
-	background-color: white;
-}
 
 h6 {
 	font-size: 16px;
@@ -109,10 +103,12 @@ h6 {
 	color: #333;
   }
 
+  .ant-tabs-nav {
+	border: none; /* Remove the bottom border line under the tabs */
+  }
 
 .ant-tabs-tab {
 	background-color: #add8e6;
-	border: 1px solid #add8e6;
 	border-radius: 5px;
 	color: #000;
 	text-align: center;
@@ -123,8 +119,8 @@ h6 {
 	margin-bottom: 10px; 
 	cursor: pointer;
 	transition: background-color 0.3s, color 0.3s ease;
+	border-bottom: none; /* Remove the bottom border line under the tabs */
   }
-  
   
   .ant-tabs-tab:hover {
 	background-color: #b0e0e6;
@@ -196,8 +192,7 @@ h6 {
 	border-color: #6ED2E6;
   }
 
-
-  .custom-tabs .ant-tabs-ink-bar {
+    .custom-tabs .ant-tabs-ink-bar {
 	display: none;
   }
   
