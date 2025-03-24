@@ -95,6 +95,49 @@
 .card-body b {
   color: #222;
 }
+
+/* General container styles */
+.doccard {
+  max-width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.doccard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Header styles */
+.doccard-header {
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #333333;
+  background-color: #ADE8F4;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Body styles */
+.doccard-body {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
+}
+
+/* Bold labels */
+.doccard-body b {
+  color: #222;
+}
+
 .ant-table-thead > tr > th {
   font-size: 18px; /* Larger font size for headers */
   font-family: 'Montserrat', sans-serif;
@@ -148,8 +191,8 @@
   background-color: #4caf50; /* Green for "Approve" button */
   color: white;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 5px 20px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -238,7 +281,7 @@
     padding: 8px;    /* Adjust padding for compact display */
   }
   .card {
-      max-width: 100%; /* Adjusts for smaller devices */
+      width: 130%;
   }
   .custom-table th, .custom-table td {
     font-size: 14px; /* Smaller font size for small screens */
@@ -255,7 +298,7 @@
   }
 
   .card {
-    max-width: 100%; /* Adjusts for smaller devices */
+    max-width: 200%; /* Adjusts for smaller devices */
 }
   .custom-table {
     width: 50%; /* Ensure table takes full width */
