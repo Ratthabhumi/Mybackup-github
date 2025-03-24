@@ -94,7 +94,7 @@ const Welcome = () => {
                                 </div>
                                 
                                 <p><i className="fab fa-facebook"></i> ศูนย์การแพทย์ สจล. KMITL Medical center</p>
-                                <p><i className="fas fa-globe"></i>  <a href="http://medicalcenter.kmitl.ac.th/service/" target="_blank" rel="noopener noreferrer">http://medicalcenter.kmitl.ac.th/service/</a></p>
+                                <p><i className="fas fa-globe"></i>  <a href="https://kmchf-pp.org" target="_blank" rel="noopener noreferrer">https://kmchf-pp.org</a></p>
                                 <p><i className="fas fa-phone"></i> Tel: 02-3298145, 02 329 8000 - 9633</p>
 
                             </div>

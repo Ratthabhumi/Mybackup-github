@@ -165,7 +165,7 @@ const Login = () => {
                                 </div>
                                 <div className="info-content">
                                     <p><i className="fab fa-facebook"></i> ศูนย์การแพทย์ สจล. KMITL Medical Center</p>
-                                    <p><i className="fas fa-globe"></i> <a href="http://medicalcenter.kmitl.ac.th/service/" target="_blank" rel="noopener noreferrer">http://medicalcenter.kmitl.ac.th/service/</a></p>
+                                    <p><i className="fas fa-globe"></i> <a href="https://kmchf-pp.org" target="_blank" rel="noopener noreferrer">https://kmchf-pp.org</a></p>
                                     <p><i className="fas fa-phone"></i> 02 329 8143, 02 329 8000 - 3633</p>
                                 </div>
                                 

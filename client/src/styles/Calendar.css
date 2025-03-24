@@ -105,7 +105,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   transition: transform 0.2s, box-shadow 0.2s;
-  margin-left: 15px;
   cursor: pointer;
   max-width: 85%; /* Set a maximum width for the card */
 }
@@ -122,14 +121,18 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #333333;
+  border-radius: 8px;
   background-color: #ADE8F4;
   width: 100%; /* Ensure the header takes full width */
   box-sizing: border-box; /* Include padding in the element's total width and height */
-  margin-bottom: 0.5rem;
+  width: calc(100% + 20px); /* Ensure the header takes full width including padding */
+  margin: -10px -10px 0 -10px; /* Negative margin to include the padding in the background */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 /* Body styles */
 .doccard-body {
+  margin-top: 5px;
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   color: #555;
@@ -269,7 +272,8 @@
 .custom-calendar-container {
   padding: 20px;
   width: 95%; /* Optional for consistent layout */
-  height: 90%; /* Define a fixed height */
+  min-height: 300px; /* Minimum height */
+  height: auto; 
   margin: 0 auto;
   background: #fcfcfc;
   border-radius: 8px;
@@ -345,8 +349,9 @@
   }
   .custom-calendar-container {
     padding: 5px;
-    width: 100%; /* Optional for consistent layout */
+    width: auto; /* Optional for consistent layout */
     box-shadow: none;
     border-radius: 4px;
+    height: auto;
   }
 }
