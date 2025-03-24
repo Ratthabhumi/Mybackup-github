@@ -23,6 +23,11 @@
 	z-index: 999;
 }
 
+.sidebar.hidden {
+	width: 0;
+	visibility: hidden;
+  }
+
 .content{
 	width: 100%;
 	height: 100%;
