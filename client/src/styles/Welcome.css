@@ -394,6 +394,12 @@ a:hover {
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
+    .logowelcome{
+        display: none; /* Hide the button for smaller screens */
+    }
+    .right-corner-btn {
+        display: none; /* Hide the button for smaller screens */
+    }
     .header-content {
         flex-direction: column;
         text-align: center;
@@ -426,7 +432,7 @@ a:hover {
     
     .section-images, .section-content {
         width: 100%;
-        height: 500px;
+        height: auto;
     }
 
     .info-boxes {

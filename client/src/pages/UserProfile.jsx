@@ -73,7 +73,7 @@ const UserProfile = () => {
 	<Tabs className="custom-tabs" defaultActiveKey="1">
 	  <Tabs.TabPane tab="Profile" key="1">
 		{userInfo && (
-		  <div className="custom-calendar-container">
+		  <div>
 		  <div className="ListofDoctors-button">Personal Details :</div>
 		  <Form
 			layout="vertical"
@@ -143,7 +143,6 @@ const UserProfile = () => {
 		)}
 	  </Tabs.TabPane>
 	  <Tabs.TabPane tab="Change Password" key="2">
-	  <div className="custom-calendar-container">
 		<Form layout="vertical" onFinish={handlePasswordFinish} className="m-3">
 		  <Row gutter={20}>
 			<Col xs={24} md={24} lg={8}>
@@ -189,7 +188,6 @@ const UserProfile = () => {
 			</Col>
 		  </Row>
 		</Form>
-		</div>
 	  </Tabs.TabPane>
 	</Tabs>
   </Layout>

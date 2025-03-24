@@ -230,8 +230,7 @@
   overflow: auto;
 }
 
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .custom-calendar-container {
     padding: 10px;
     max-width: 100%;
@@ -239,10 +238,7 @@
   .card {
       max-width: 90%; /* Adjusts for smaller devices */
   }
-}
-
-@media screen and (max-width: 768px) {
-  .custom-table td, .custom-table th {
+  .custom-table th, .custom-table td {
     font-size: 14px; /* Smaller font size for small screens */
     padding: 8px;    /* Adjust padding for compact display */
   }
@@ -252,9 +248,31 @@
 }
 
 @media screen and (max-width: 480px) {
-  .custom-table td, .custom-table th {
+  .custom-table th, .custom-table td {
     display: block;  /* Stack cells vertically for very small screens */
     width: 100%;     /* Make each cell take up the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+
+  .custom-table th {
+    background-color: #b3e5fc; /* Light blue header */
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .custom-table td {
+    background-color: #fff; /* White background for rows */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add a border between stacked cells */
+  }
+
+  .custom-table tr {
+    margin-bottom: 10px; /* Add space between rows */
+  }
+
+  .custom-table .btn-danger {
+    width: 100%; /* Make button full width */
+    margin: 10px 0; /* Add margin for spacing */
   }
   .ant-picker-calendar {
     width: 100%; /* Adjust width for mobile devices */
