@@ -154,6 +154,9 @@ const UserLayout = ({ children }) => {
       >
         {isSidebarVisible ? '◀ Hide' : '▶'}
       </button>
+      <footer className="footer">
+        <p>© 2025 KMC Hospital - All rights reserved.</p>
+      </footer>
     </div>
   );
 };
