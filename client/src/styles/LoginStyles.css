@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-/* General page styles */
+
 .login-page {
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
   min-height: 100vh;
   background: rgba(255, 255, 255, 0.5);
   overflow: hidden;
-  font-family: 'Montserrat', sans-serif; /* Set default font */
+  font-family: 'Montserrat', sans-serif;
 }
 
 .blurred-background {
@@ -18,13 +18,12 @@
   height: 100%;
   background: url('../images/Hospital.png') no-repeat center center/cover;
   z-index: -1;
-filter: blur(8px);
--webkit-filter: blur(8px);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
-/* Main container styles */
 .main-container {
-  display: flex; /* Enables side-by-side layout */
+  display: flex;
   width: 90%;
   max-width: 1270px;
   background: rgba(230, 230, 230, 0.85);
@@ -35,12 +34,11 @@ filter: blur(8px);
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Left Section */
 .left-section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Push everything to the top */
+  justify-content: flex-start;
   align-items: center;
   padding: 20px;
   background: #FFFFFF;
@@ -51,9 +49,9 @@ filter: blur(8px);
 }
 
 .scrollable-content2 {
-  width: 100%; /* Takes up full container width */
-  max-height: 540px; /* Adjust height as needed */
-  overflow-y: auto; /* Adds vertical scrolling */
+  width: 100%;
+  max-height: 540px;
+  overflow-y: auto;
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -72,26 +70,26 @@ filter: blur(8px);
 }
 
 .logo-container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;  /* Make it take the full width */
-max-width: 400px;  /* Optional: Set max width if needed */
-margin: 20px auto; /* Center the logos horizontally */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
 }
 
 .logo {
-width: 120px;
-height: 60px;
-background: url('../images/KQueLogo.png') no-repeat center center/contain;
-margin-top: 10px;
-background-size: contain;
-cursor: pointer;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 120px;
+  height: 60px;
+  background: url('../images/KQueLogo.png') no-repeat center center/contain;
+  margin-top: 10px;
+  background-size: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.2); /* Creates a zoom effect */
+  transform: scale(1.2);
 }
 
 .logo2 {
@@ -103,61 +101,62 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .logo2:hover {
-  transform: scale(1.2); /* Creates a zoom effect */
+  transform: scale(1.2);
 }
 
 .tabs {
-display: flex;
-position: relative;
-margin-bottom: 20px;
-justify-content: center;
-align-items: center;
-background-color: #f0f0f0b4;
-border-radius: 25px;
-padding: 5px;
-width: 240px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-margin-top: 0; /* Ensure there's no top margin */
-font-size: 16px;
-font-family: 'Montserrat';
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0b4;
+  border-radius: 25px;
+  padding: 5px;
+  width: 240px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  font-size: 16px;
+  font-family: 'Montserrat';
 }
 
 .sliding-btn {
-width: 120px;
-height: 40px;
-font-size: 18px !important;
-line-height: 1px; /* Ensures vertical alignment of text */
-color: #000000;
-text-align: center; /* Centers the text horizontally */
-background-color: transparent;
-border: none;
-border-radius: 25px;
-cursor: pointer;
-z-index: 1;
-transition: color 0.3s ease;
+  width: 120px;
+  height: 40px;
+  font-size: 18px !important;
+  line-height: 1px;
+  color: #000000;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
 .sliding-btn.active {
-color: #000000;
-z-index: 2; /* Ensures the text is above the slider */
+  color: #000000;
+  z-index: 2;
 }
 
 .slider {
-position: absolute;
-top: 0;
-left: 0;
-width: 120px;
-height: 100%;
-background-color: #4CB6AC;
-border-radius: 25px;
-transition: left 0.3s ease;
-z-index: 0; /* Ensures it's behind the buttons */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  background-color: #4CB6AC;
+  border-radius: 25px;
+  transition: left 0.3s ease;
+  z-index: 0;
 }
 
 .active-tab {
-background: #4CB6AC;
-color: #000;
+  background: #4CB6AC;
+  color: #000;
 }
 
 .welcome-message {
@@ -166,9 +165,10 @@ color: #000;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
   margin-top: 20px;
-  border-bottom: 1px solid #000; /* Adjust the color and thickness as needed */
-  padding-bottom: 10px; /* Optional: Adds spacing between the text and the line */
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
 }
+
 .flexible-line {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -177,23 +177,22 @@ color: #000;
   margin-top: 20px;
   position: relative;
   padding-top: 10px;
-  text-align: left; /* Align the text to the left */
+  text-align: left;
 }
 
 .flexible-line::before {
   content: "";
   display: block;
-  width: 100%; /* Adjust the width of the line */
+  width: 100%;
   left: 50%;
-  height: 1px; /* Adjust the thickness of the line */
-  background-color: black; /* Line color */
-  margin: 0 auto; /* Center the line under the text */
-  margin-top: 1px; /* Space between the text and the line */
-}  
+  height: 1px;
+  background-color: black;
+  margin: 0 auto;
+  margin-top: 1px;
+}
 
-/* Right Section */
 .right-section {
-  flex: 1; /* Takes 50% width of the container */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,21 +201,20 @@ color: #000;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Terms Scroll Area */
 .terms-scroll {
-  max-height: 200px; /* Increased height for readability */
-  overflow-y: auto; /* Scrollable content */
+  max-height: 200px;
+  overflow-y: auto;
   margin-top: 15px;
   padding: 15px;
-  border: 1px solid #dcdcdc; /* Light border */
-  background: transparent; /* Makes the background fully transparent */
-  border-radius: 10px; /* Softer edges */
-  font-family: 'Montserrat', sans-serif; /* Ensure consistent font */
+  border: 1px solid #dcdcdc;
+  background: transparent;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  color: #555; /* Slightly muted text color for elegance */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  text-align: left; /* Aligns the text to the left */
+  color: #555;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 .login-form {
@@ -226,9 +224,8 @@ color: #000;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Increase height for input fields in the login form */
 .ant-input, .ant-input-password {
-  font-size: 16px; /* Make the text more readable */
+  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -263,14 +260,13 @@ color: #000;
   border-radius: 20px;
   margin-bottom: 20px;
   cursor: pointer;
-  font-size: 18px; /* Make the text more readable */
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
 }
 
-
 .additional-info {
-  display: flex; /* Enables proper alignment */
-  justify-content: flex-end; /* Pushes the text to the left */
+  display: flex;
+  justify-content: flex-end;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -287,24 +283,22 @@ color: #000;
 }
 
 .forgot-password-btn:hover {
-  color: #4CB6AC; /* Green color on hover */
+  color: #4CB6AC;
 }
 
-/* Ensure the font is applied correctly to the terms-checkbox */
 .login-page .terms-checkbox {
-  display: flex; /* Enables proper alignment */
-  justify-content: flex-start; /* Aligns the checkbox and text to the left */
-  font-family: 'Montserrat', sans-serif !important; /* Apply Montserrat font */
-  font-size: 14px; /* Adjust font size as needed */
-  color: #333; /* Adjust text color as needed */
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14px;
+  color: #333;
 }
-/* Align the checkbox to the right corner */
+
 .terms-checkbox {
-  display: flex; /* Enables proper alignment */
-  justify-content: flex-start; /* Pushes the checkbox and text to the right */
+  display: flex;
+  justify-content: flex-start;
   font-family: 'Montserrat', sans-serif;
 }
-/* Add these styles to your existing LoginStyles.css file */
 
 .info-row {
   display: flex;
@@ -344,38 +338,35 @@ color: #000;
 
 .info-content {
   display: flex;
-  text-align: left; /* Aligns all text to the left */
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-start; /* Align content to the left */
+  text-align: left;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .info-content p {
   display: flex;
-  align-items: baseline; /* Align text baselines for consistency */
+  align-items: baseline;
 }
 
-.info-content p span { 
-  font-weight: bold; /* Optional: Highlight the labels */
+.info-content p span {
+  font-weight: bold;
   display: inline-block;
-}  
+}
 
 .info-content p:last-child {
   margin-bottom: 0;
 }
 
-/* You may need to adjust these styles based on your design preferences */
 .open-hour, .contacts, .location {
   margin-bottom: 20px;
 }
 
-/* Ensure icons are properly aligned */
 .info-content i {
   margin-right: 8px;
   width: 16px;
   text-align: center;
 }
 
-/* Style for the links within the info content */
 .info-content a {
   color: #1890ff;
   text-decoration: none;
@@ -385,7 +376,6 @@ color: #000;
   text-decoration: underline;
 }
 
-/* Specific icon styles */
 .open-hour .icon-container {
   background-color: #f0f2f5;
 }
@@ -398,7 +388,6 @@ color: #000;
   background-color: #f0f2f5;
 }
 
-/* Span styles for the location */
 .info-content span {
   font-weight: 500;
   margin-right: 5px;
@@ -406,7 +395,7 @@ color: #000;
 
 ::placeholder {
   font-size: 16px;
-  color: #ccc; /* Optional: Adjust color if needed */
+  color: #ccc;
 }
 
 .info-btn {
@@ -415,12 +404,11 @@ color: #000;
 }
 
 .scrollable-content {
-  max-height: 400px; /* Set a fixed height */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding-right: 15px; /* Add some padding to the right */
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 15px;
 }
 
-/* Add a custom scrollbar style if desired */
 .scrollable-content::-webkit-scrollbar {
   width: 8px;
 }
@@ -432,17 +420,6 @@ color: #000;
 
 .scrollable-content::-webkit-scrollbar-thumb:hover {
   background-color: #555;
-}
-
-/* General page styles */
-.login-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: rgba(255, 255, 255, 0.5);
-  overflow: hidden;
-  font-family: 'Montserrat', sans-serif; /* Set default font */
 }
 
 .blurred-background2 {
@@ -457,392 +434,98 @@ color: #000;
   -webkit-filter: blur(8px);
 }
 
-/* Main container styles */
-.main-container {
-  display: flex; /* Enables side-by-side layout */
-  width: 90%;
-  max-width: 1270px;
-  background: rgba(230, 230, 230, 0.85);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 40px;
-  padding: 40px;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Left Section */
-.left-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Push everything to the top */
-  align-items: center;
-  padding: 20px;
-  background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-right: 2px solid rgba(0, 0, 0, 0.1);
-  font-family: 'Montserrat', sans-serif;
-}
-
-.header-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.logo-container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;  /* Make it take the full width */
-max-width: 400px;  /* Optional: Set max width if needed */
-margin: 20px auto; /* Center the logos horizontally */
-}
-
-.logo {
-width: 120px;
-height: 60px;
-background: url('../images/KQueLogo.png') no-repeat center center/contain;
-margin-top: 10px;
-}
-
-.logo2 {
-width: 120px;
-height: 60px;
-background: url('../images/Logo.png') no-repeat center center/contain;
-margin-top: 10px;
-background-size: contain;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-
 .logo3 {
   width: 120px;
   height: 60px;
   background: url('../images/Logowhite.png') no-repeat center center/contain;
-  margin: 10px auto; /* Reduce the top and bottom spacing */
-  position: relative; /* Enables positioning adjustments */
-  top: 0px; /* Moves it higher relative to its normal position */
-  }
-
-.welcome-message {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
-  margin-top: 20px;
-  border-bottom: 1px solid #000; /* Adjust the color and thickness as needed */
-  padding-bottom: 10px; /* Optional: Adds spacing between the text and the line */
-}
-.flexible-line {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
-  margin-top: 20px;
+  margin: 10px auto;
   position: relative;
-  padding-top: 10px;
-  text-align: left; /* Align the text to the left */
+  top: 0px;
 }
 
-.flexible-line::before {
-  content: "";
-  display: block;
-  width: 100%; /* Adjust the width of the line */
-  left: 50%;
-  height: 1px; /* Adjust the thickness of the line */
-  background-color: black; /* Line color */
-  margin: 0 auto; /* Center the line under the text */
-  margin-top: 1px; /* Space between the text and the line */
-}  
-
-/* Right Section */
-.right-section {
-  flex: 1; /* Takes 50% width of the container */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Terms Scroll Area */
-.terms-scroll {
-  max-height: 200px; /* Increased height for readability */
-  overflow-y: auto; /* Scrollable content */
-  margin-top: 15px;
-  padding: 15px;
-  border: 1px solid #dcdcdc; /* Light border */
-  background: transparent; /* Makes the background fully transparent */
-  border-radius: 10px; /* Softer edges */
-  font-family: 'Montserrat', sans-serif; /* Ensure consistent font */
-  font-size: 14px;
-  line-height: 1.6;
-  color: #555; /* Slightly muted text color for elegance */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  text-align: left; /* Aligns the text to the left */
-}
-
-.login-form {
-  width: 100%;
-  max-width: 400px;
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Increase height for input fields in the login form */
-.ant-input, .ant-input-password {
-  font-size: 16px; /* Make the text more readable */
-  font-family: 'Montserrat', sans-serif;
-}
-
-.active-btn {
-  background: #FFB991;
-}
-
-.hospital-btn:hover {
-  opacity: 0.9;
-}
-
-.login-btn {
-  width: 100%;
-  height: 40px;
-  background: #3cbeb4;
-  border: none;
-  border-radius: 4px;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.login-btn:hover {
-  background: #7FCEC7;
-}
-
-.additional-info {
-  display: flex; /* Enables proper alignment */
-  justify-content: flex-end; /* Pushes the text to the left */
-  font-family: 'Montserrat', sans-serif;
-}
-
-.forgot-password-btn {
-  background: none;
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color: #434343;
-  text-decoration: underline;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.forgot-password-btn:hover {
-  color: #4CB6AC; /* Green color on hover */
-}
-
-.info-row {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 16px;
-  margin-top: 16px;
-}
-
-.info-header {
-  display: flex;
-  align-items: center;
-  min-width: 100px;
-  margin-right: 16px;
-}
-
-.icon-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-}
-
-.icon-container i {
-  font-size: 14px;
-  color: #666;
-}
-
-.info-header h3 {
-  margin: 0;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.info-content {
-  display: flex;
-  text-align: left; /* Aligns all text to the left */
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-start; /* Align content to the left */
-}
-
-.info-content p {
-  display: flex;
-  align-items: baseline; /* Align text baselines for consistency */
-}
-
-.info-content p span { 
-  font-weight: bold; /* Optional: Highlight the labels */
-  display: inline-block;
-}  
-
-.info-content p:last-child {
-  margin-bottom: 0;
-}
-
-/* You may need to adjust these styles based on your design preferences */
-.open-hour, .contacts, .location {
-  margin-bottom: 20px;
-}
-
-/* Ensure icons are properly aligned */
-.info-content i {
-  margin-right: 8px;
-  width: 16px;
-  text-align: center;
-}
-
-/* Style for the links within the info content */
-.info-content a {
-  color: #1890ff;
-  text-decoration: none;
-}
-
-.info-content a:hover {
-  text-decoration: underline;
-}
-
-/* Specific icon styles */
-.open-hour .icon-container {
-  background-color: #f0f2f5;
-}
-
-.contacts .icon-container {
-  background-color: #f0f2f5;
-}
-
-.location .icon-container {
-  background-color: #f0f2f5;
-}
-
-/* Span styles for the location */
-.info-content span {
-  font-weight: 500;
-  margin-right: 5px;
-}
-
-::placeholder {
-  font-size: 16px;
-  color: #ccc; /* Optional: Adjust color if needed */
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .main-container {
-      flex-direction: column; /* Stacks sections vertically on smaller screens */
-      padding: 20px;
+    flex-direction: column;
+    padding: 20px;
   }
 
   .left-section {
-      border-right: none; /* Removes divider */
-      border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Adds a horizontal divider */
-      overflow-y: auto;
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
   }
 
   .right-section {
-      margin-top: 20px;
-  }
-}
-
-/* Adjustments for mobile responsiveness */
-@media (max-width: 768px) {
-/* Stack sections vertically */
-.main-container {
-  flex-direction: column;
-  padding: 20px;
-  width: 100%;
-  max-width: none;
-}
-
-.left-section {
-  border-right: none; /* Removes vertical divider */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Adds a horizontal divider */
-  padding: 15px;
-  width: 100%;
-}
-
-.right-section {
-  margin-top: 20px;
-  width: 100%;
-}
-
-/* Adjust logo size for mobile */
-.logo {
-  width: 100px; /* Smaller size for mobile */
-  margin-top: 30px; /* Move logo closer to the top */
-  margin-left: 20px; /* Adjust space from the left for mobile */
+    margin-top: 20px;
   }
 
+  .main-container {
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: none;
+  }
 
-/* Adjust logo2 position and size for mobile */
-.logo2 {
-  width: 100px;
-  height: 50px;
-  right: 0px; /* Adjust distance from the right edge */
-}
+  .left-section {
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100%;
+  }
 
-/* Adjust input field size */
-.ant-input, .ant-input-password {
-  font-size: 16px;
-  height: 45px; /* Make input fields bigger on mobile */
-}
+  .right-section {
+    margin-top: 20px;
+    width: 100%;
+  }
 
-.login-btn {
-  width: 100%;
-  height: 50px;
-  font-size: 18px; /* Make the button bigger */
-}
+  .logo {
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
 
-/* Make welcome message more readable */
-.welcome-message {
-  font-size: 14px;
-  line-height: 1.4;
-}
+  .logo2 {
+    width: 100px;
+    height: 50px;
+    right: 0px;
+  }
 
-/* Ensure the right section info is also responsive */
-.info-content p {
-  font-size: 14px; /* Adjust text size for smaller screens */
-}
+  .ant-input, .ant-input-password {
+    font-size: 16px;
+    height: 45px;
+  }
 
-.info-header h3 {
-  font-size: 18px;
-}
+  .login-btn {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+  }
 
-.info-content {
-  font-size: 14px;
-  line-height: 1.5;
-}
+  .welcome-message {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 
-.info-row {
-  flex-direction: column;
-  text-align: left;
-}
+  .info-content p {
+    font-size: 14px;
+  }
 
-.icon-container {
-  width: 28px;
-  height: 28px;
-}
-}
+  .info-header h3 {
+    font-size: 18px;
+  }
 
+  .info-content {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .info-row {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .icon-container {
+    width: 28px;
+    height: 28px;
+  }
+}

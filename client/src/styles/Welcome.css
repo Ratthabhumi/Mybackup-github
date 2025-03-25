@@ -1,504 +1,531 @@
-/* General Styles */
-/* Update: 2025-03-14 - Attempting to fix header display issue */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
-a {
-    word-break: break-word; /* Ensures long links wrap onto the next line if necessary */
-    color: #007BFF; /* Modern link color */
-    text-decoration: none; /* Removes underline for a clean look */
-    font-size: 14px; /* Adjusts font size for readability on small screens */
+.blurred-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/Hospital.png') no-repeat center center/cover;
+  z-index: -1;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
-a:hover {
-    text-decoration: underline; /* Adds underline on hover to indicate interactivity */
+.main-container {
+  display: flex;
+  width: 90%;
+  max-width: 1270px;
+  background: rgba(230, 230, 230, 0.85);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  padding: 40px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Main container */
-.welcome-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #ffffff88;
-    position: relative;
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Logo in top left */
-.logowelcome {
-    width: 120px;
-    height: 60px;
-    background: url('../images/Logowhite.png') no-repeat center center;
-    background-size: contain;
-    position: fixed;
-    top: 20px;
-    z-index: 1000;
-    cursor: pointer;
-    transition: transform 0.3s;
-    position: fixed; /* Changed to fixed */
-    right: 20px;
-    display: flex;
+.scrollable-content2 {
+  width: 100%;
+  max-height: 540px;
+  overflow-y: auto;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.logowelcome:hover {
-    transform: scale(1.1);
+.header-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Top right buttons */
-.top-right-buttons {
-    position: fixed; /* Changed to fixed */
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 10px;
-    z-index: 100;
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
 }
 
-.right-corner-btn {
-    font-family: 'Montserrat', sans-serif;
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #ffffff;
-    transition: background-color 0.3s, transform 0.3s;
+.logo {
+  width: 120px;
+  height: 60px;
+  background: url('../images/KQueLogo.png') no-repeat center center/contain;
+  margin-top: 10px;
+  background-size: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.right-corner-btn:first-child {
-    background-color: #ff7f2a;
+.logo:hover {
+  transform: scale(1.2);
 }
 
-.right-corner-btn:last-child {
-    background-color: #4CB6AC;
+.logo2 {
+  width: 120px;
+  height: 60px;
+  background: url('../images/Logo.png') no-repeat center center / contain;
+  margin-top: 10px;
+  background-size: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.right-corner-btn:hover {
-    transform: scale(1.05);
-    text-decoration: none; /* Remove underline on hover */
+.logo2:hover {
+  transform: scale(1.2);
 }
 
-
-.logokqueue {
-        padding-left: 0px;
-        max-width: 500px;
-    }
-
-    /* KQue logo as an image */
-.kque-logo {
-        width: 120px;
-        height: 60px;
-        background: url('../images/KQueLogo.png') no-repeat center center;
-        background-size: contain;
-        margin-bottom: 15px;
-    }
-
-.logokqueue p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    margin: 0;
+.tabs {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0b4;
+  border-radius: 25px;
+  padding: 5px;
+  width: 240px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  font-size: 16px;
+  font-family: 'Montserrat';
 }
 
-/* Feature sections container */
-.feature-sections {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
+.sliding-btn {
+  width: 120px;
+  height: 40px;
+  font-size: 18px !important;
+  line-height: 1px;
+  color: #000000;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
-/* Sport section styling */
-.sport-section {
-    display: flex;
-    flex-direction: row; /* Changed to row for better layout */
-    background-color: #ffffff88;
-    border-radius: 8px;
-    overflow: hidden;
-    padding: 20px; /* Added padding for better spacing */
+.sliding-btn.active {
+  color: #000000;
+  z-index: 2;
 }
 
-.section-images {
-    display: flex;
-    height: 200px;
-    width: 40%; /* Set width for images section */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  background-color: #4CB6AC;
+  border-radius: 25px;
+  transition: left 0.3s ease;
+  z-index: 0;
 }
 
-.sport-image1, .sport-image2, .sport-image3, .sport-image4 {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
+.active-tab {
+  background: #4CB6AC;
+  color: #000;
 }
 
-.sport-image1 {
-    background-image: url('../images/Hospital5.jpg');
+.welcome-message {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
 }
 
-.sport-image2 {
-    background-image: url('../images/Hospital3.jpg');
+.flexible-line {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+  position: relative;
+  padding-top: 10px;
+  text-align: left;
 }
 
-.sport-image3 {
-    background-image: url('../images/Hospital4.jpg');
+.flexible-line::before {
+  content: "";
+  display: block;
+  width: 100%;
+  left: 50%;
+  height: 1px;
+  background-color: black;
+  margin: 0 auto;
+  margin-top: 1px;
 }
 
-.sport-image4 {
-    background-image: url('../images/Welcome.png');
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.section-content {
-    padding: 20px;
-    width: 60%; /* Set width for content section */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.terms-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #dcdcdc;
+  background: transparent;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
-.section-content h2 {
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 1.5;
-    color: #1e1e1e;
-    margin-bottom: 20px;
-    text-align: left; /* Ensures the text is aligned to the left */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
 }
 
-
-/* Thai language section */
-.thai-section {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: right;
+.ant-input, .ant-input-password {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.thai-content h2 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.thai-content p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5;
-}
-
-/* Hospital section styling */
-.hospital-section {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff88;
-    border-radius: 8px;
-    overflow: hidden;
-    padding: 0 0 20px 0;
-    margin-bottom: 30px;
-}
-
-.hospital-image {
-    width: 100%;
-    height: 250px;
-    background-image: url('../images/Hospital2.jpg');
-    background-size: cover;
-    background-position: center 35%; /* Adjust crop to be higher */
-}
-
-.info-boxes {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    flex-wrap: wrap;
-}
-
-.info-box {
-    flex: 1;
-    min-width: 200px;
-    padding: 15px;
-    text-align: left;
-    margin: 15px 10px; /* Adds space around each info-box */
-    background-color: #f8f8f8; 
-    border-radius: 20px; /* Keep the rounded corners */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
-}
-
-
-.icon-container {
-    display: flex; /* Enables Flexbox for layout */
-    align-items: center; /* Centers icons and text vertically */
-    justify-content: flex-start; /* Aligns items to the left */
-}
-
-.icon-clock, .icon-contact, .icon-location {
-    width: 20px;
-    height: 20px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    margin-right: 10px; /* Adds space between the icon and its content */
-}
-
-.icon-clock {
-    background-image: url('../images/icon\ _clock.png');
-}
-
-.icon-contact {
-    background-image: url('../images/iconpeople.png');
-}
-
-.icon-location {
-    background-image: url('../images/iconlocation.png');
-}
-
-.thecontainer {
-    display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    gap: 15px; /* Adds spacing between the info boxes */
-    flex-wrap: wrap; /* Ensures wrapping for smaller screens */
-    padding: 20px;
-    background-color: #f9f9f9; /* Optional background color */
-    border-radius: 15px; /* Rounds the corners of the container */
-    margin: 0 auto; /* Centers the container horizontally */
-    max-width: 800px; /* Sets a max width for the container */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a polished look */
-}
-
-
-.info-box h3 {
-    font-size: 16px;
-    margin: 0; /* Removes top and bottom margin to keep alignment */
-    color: #333;
-    white-space: nowrap; /* Ensures the text stays on one line */
-    margin-left: 30px; /* Moves the text slightly to the right */
-}
-
-.info-box p {
-    font-size: 14px;
-    color: #333;
-    line-height: 1.5;
-}
-
-/* Button styling */
-.login-register-btn {
-    font-family: 'Montserrat', sans-serif;
-    display: inline-block;
-    background-color: #ff7f2a;
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.login-register-btn:hover {
-    transform: scale(1.05);
-    background-color: #e5702a;
-    text-decoration: none; /* Remove underline on hover */
-}
-
-.hospital-btn {
-    background-color: #4CB6AC;
-    margin: 10px auto;
-    display: block;
-    max-width: 200px;
+.active-btn {
+  background: #FFB991;
 }
 
 .hospital-btn:hover {
-    background-color: #409a91;
+  opacity: 0.9;
 }
 
-/* Footer styling */
-.footer-section {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 15px;
-    margin-top: auto;
-    border-radius: 20px; /* Keep the rounded corners */
+.login-btn {
+  width: 100%;
+  height: 40px;
+  background: #3cbeb4;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.footer-section p {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
+.login-btn:hover {
+  background: #7FCEC7;
 }
 
-/* Slider container styles */
-.slider-container {
-    position: relative;
-    width: 100%; /* Matches the width of .sport-section */
-    height: 100%; /* Matches the height of .sport-section */
-    margin: 0; /* Removes extra spacing to blend seamlessly */
-    overflow: hidden;
-    border-radius: 20px; /* Matches the border-radius of .sport-section */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Matches the shadow of .sport-section */
-    padding: 0; /* Remove padding to ensure full image coverage */
-  }
-  
-  .slider2 {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 1) 1%,
-        rgba(0, 0, 0, 1) 100%,
-        rgba(0, 0, 0, 0)
-    );
+.login-btn2 {
+  width: 70%;
+  height: 40px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.list {
-    display: flex;
-    position: relative;
-    animation: scrollLeft 60s linear infinite; /* Adjusted duration to 30s */
+.additional-info {
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.item {
-    width: 95%; /* 100% / 8 items */
-    height: 100%; /* Match the height of the container */
-    position: relative;
-    flex-shrink: 0;
+.forgot-password-btn {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #434343;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensure the image covers the entire item */
+.forgot-password-btn:hover {
+  color: #4CB6AC;
 }
 
-@keyframes scrollLeft {
-    to {
-        transform: translateX(-100%);
-    }
+.login-page .terms-checkbox {
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14px;
+  color: #333;
 }
 
-.item:nth-child(1) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 1) * -1); }
-.item:nth-child(2) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 2) * -1); }
-.item:nth-child(3) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 3) * -1); }
-.item:nth-child(4) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 4) * -1); }
-.item:nth-child(5) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 5) * -1); }
-.item:nth-child(6) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 6) * -1); }
-.item:nth-child(7) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 7) * -1); }
-.item:nth-child(8) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 8) * -1); }
-.item:nth-child(9) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 9) * -1); }
-.item:nth-child(10) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 10) * -1); }
-.item:nth-child(11) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 11) * -1); }
-.item:nth-child(12) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 12) * -1); }
-.item:nth-child(13) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 13) * -1); }
-.item:nth-child(14) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 14) * -1); }
-.item:nth-child(15) { animation-delay: calc(30s / var(--quantity) * (var(--quantity) - 15) * -1); }
+.terms-checkbox {
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Montserrat', sans-serif;
+}
 
-/* Media queries for responsiveness */
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+  margin-right: 16px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.icon-container i {
+  font-size: 14px;
+  color: #666;
+}
+
+.info-header h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.info-content {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info-content p {
+  display: flex;
+  align-items: baseline;
+}
+
+.info-content p span {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.info-content p:last-child {
+  margin-bottom: 0;
+}
+
+.open-hour, .contacts, .location {
+  margin-bottom: 20px;
+}
+
+.info-content i {
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+}
+
+.info-content a {
+  color: #1890ff;
+  text-decoration: none;
+}
+
+.info-content a:hover {
+  text-decoration: underline;
+}
+
+.open-hour .icon-container {
+  background-color: #f0f2f5;
+}
+
+.contacts .icon-container {
+  background-color: #f0f2f5;
+}
+
+.location .icon-container {
+  background-color: #f0f2f5;
+}
+
+.info-content span {
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+::placeholder {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.info-btn {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.scrollable-content {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.scrollable-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.blurred-background2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/KMsport.jpg') no-repeat center center/cover;
+  z-index: -1;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.logo3 {
+  width: 120px;
+  height: 60px;
+  background: url('../images/Logowhite.png') no-repeat center center/contain;
+  margin: 10px auto;
+  position: relative;
+  top: 0px;
+}
+
 @media (max-width: 768px) {
-    .item img {
-        width: 150%;
-        height: 100%;
-        object-fit: contain; /* Ensure the image covers the entire item */
-    }
-    .logowelcome{
-        display: none; /* Hide the button for smaller screens */
-    }
-    .right-corner-btn {
-        display: none; /* Hide the button for smaller screens */
-    }
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 100px 20px 40px;
-    }
+  .main-container {
+    flex-direction: column;
+    padding: 20px;
+  }
 
-    .logokqueue {
-        padding-left: 0;
-        padding-top: 20px;
-    }
+  .left-section {
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
 
-    .kque-logo {
-        margin: 0 auto 15px;
-        width: 100px;
-        height: 50px;
-    }
+  .right-section {
+    margin-top: 20px;
+  }
 
-    .logokqueue p {
-        font-size: 14px;
-    }
+  .main-container {
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: none;
+  }
 
-     .logokqueue {
-        padding-left: 0;
-        max-width: 100%;
-    }
-    
-    .sport-section {
-        display: flex;
-        flex-direction: column; /* Changed to column for better layout */
-        /* background-color: #fff; */ /* Removed background color */
-        /* border: none;  /* Removed border */
-        border-radius: 8px;
-        box-shadow: none;
-        overflow: hidden;
-        padding: 20px; /* Added padding for better spacing */
-    }
-    
-    .section-images, .section-content {
-        width: 100%;
-        height: auto;
-    }
+  .left-section {
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100%;
+  }
 
-    .info-boxes {
-        flex-direction: column;
-    }
+  .right-section {
+    margin-top: 20px;
+    width: 100%;
+  }
 
-    .info-box {
-        margin-bottom: 20px;
-    }
-    .hospital-image {
-        height: auto; /* Make height responsive */
-    }
+  .logo {
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
 
-    .top-right-buttons {
-        flex-direction: column;
-        gap: 5px;
-    }
-}
+  .logo2 {
+    width: 100px;
+    height: 50px;
+    right: 0px;
+  }
 
+  .ant-input, .ant-input-password {
+    font-size: 16px;
+    height: 45px;
+  }
 
-@media (max-width: 480px) {
-    .header-image {
-        width: 200px;
-        height: 150px;
-    }
+  .login-btn {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+  }
 
-       .hospital-image {
-        height: auto; /* Make height responsive */
-    }
+  .welcome-message {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 
-    .kque-logo {
-        width: 100px;
-        height: 50px;
-    }
-    .logokqueue {
-        padding-left: 0;
-        max-width: 100%;
-    }
-    .logokqueue p {
-        font-size: 12px;
-    }
+  .info-content p {
+    font-size: 14px;
+  }
 
-    .section-images {
-        height: 120px;
-    }
+  .info-header h3 {
+    font-size: 18px;
+  }
 
-    .section-content h2 {
-        font-size: 14px;
-    }
+  .info-content {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .info-row {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .icon-container {
+    width: 28px;
+    height: 28px;
+  }
 }
