@@ -311,9 +311,6 @@
     padding: 5px 15px; /* Adjust padding for smaller screens */
     font-size: 14px; /* Smaller font size for better fit */
   }
-  .card {
-      width: 130%;
-  }
   .ant-picker-calendar {
     width: 100%; /* Adjust width for mobile devices */
     font-size: 14px; /* Reduce font size for better readability */
@@ -355,9 +352,6 @@
     border-radius: 4px;
     height: auto;
   }
-  .card {
-    max-width: 200%; /* Adjusts for smaller devices */
-}
 
 .custom-table .date-time-cell {
   padding-right: 10px;

@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(window.innerWidth >= 768);
   const [nextAppointment, setNextAppointment] = useState(null);
   const [queueCount, setQueueCount] = useState(0);
+  const [currentTime, setCurrentTime] = useState(dayjs().format('HH:mm:ss'));
 
   const sidebarRef = useRef(null);
 
@@ -70,8 +71,16 @@ const Layout = ({ children }) => {
     if (user) {
       fetchQueueInfo();
     }
+
+    const clockInterval = setInterval(() => {
+      setCurrentTime(dayjs().format('HH:mm:ss'));
+    }, 1000);
+
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearInterval(clockInterval);
+    };
   }, [user]);
 
   return (
@@ -129,7 +138,7 @@ const Layout = ({ children }) => {
                         <img src={Logo} alt="Logo" className="logo-image" />
                       </Link>
                       <span className="reminder2-text">
-                      No upcoming appointments</span>
+                      Current Time: {currentTime}</span>
                     </div>
                   )}
                 </div>

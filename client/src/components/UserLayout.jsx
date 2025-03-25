@@ -124,7 +124,12 @@ const UserLayout = ({ children }) => {
                               </div>
                             </div>
                 ) : (
-                  <div>No upcoming appointments</div>
+                  <div className="appointment-details-container">
+                    <Link className="logoheader" to="/" aria-label="Go to Welcome page">
+                      <img src={Logo} alt="Logo" className="logo-image" />
+                    </Link>
+                  <div className="reminder-text">No upcoming appointments</div>
+                  </div>
                 )}
               </div>
               <div style={{ display: 'flex', alignItems: 'center' }}>
