@@ -75,7 +75,7 @@ const Appointment = () => {
 			title: 'Date & Time',
 			dataIndex: 'date',
 			render:(text,record) => (
-				<span>
+				<span className="date-time-cell">
 					{dayjs(record.date).format('DD-MM-YYYY')} &nbsp;
 					{dayjs(record.time).format('HH:mm')}
 				</span>

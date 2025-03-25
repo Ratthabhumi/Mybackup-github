@@ -267,6 +267,29 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+/* Responsive styles for iPhone 14 and iPad */
+@media screen and (max-width: 1024px) {
+  .custom-table-container {
+    width: 100%; /* Adjust width for smaller screens */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+
+  .custom-table {
+    width: 100%; /* Adjust width for smaller screens */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .custom-table th, .custom-table td {
+    padding: 8px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for better fit */
+  }
+
+  .custom-table .btn-success, .custom-table .btn-danger, .custom-table .btn-primary {
+    padding: 5px 10px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Smaller font size for better fit */
+  }
+}
 
 @media screen and (max-width: 768px) {
   .custom-table-container {
@@ -314,9 +337,9 @@
 
   .custom-table th, .custom-table td {
     padding: 5px; /* Adjust padding for smaller screens */
-    font-size: 12px; /* Smaller font size for better fit */
+    font-size: 17px !important; /* Smaller font size for better fit */
+    height: 1px !important ; 
   }
-
   .custom-table .btn-success, .custom-table .btn-danger, .custom-table .btn-primary {
     padding: 5px 10px; /* Adjust padding for smaller screens */
     font-size: 12px; /* Smaller font size for better fit */
@@ -334,5 +357,10 @@
   }
   .card {
     max-width: 200%; /* Adjusts for smaller devices */
+}
+
+.custom-table .date-time-cell {
+  padding-right: 10px;
+  font-size: 15px; /* Set a fixed width for date and time cells */
 }
 }
