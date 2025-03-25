@@ -22,6 +22,7 @@ import AdminHomePage from './pages/admin/AdminHomePage';
 import Welcome from './pages/Welcome';// Import the Welcome component
 import LoginSport from './pages/LoginSport';// Import the Welcome component
 import RegisterSport from './pages/RegisterSport';// Import the Welcome component
+import Term from './pages/Term';
 
 function App() {
   const {loading} = useSelector(state => state.alerts);
@@ -50,6 +51,7 @@ function App() {
       <Route path="/doctor/home" element={<ProtectedRoute><DoctorHomePage /></ProtectedRoute>} />
       <Route path="/admin/home" element={<ProtectedRoute><AdminHomePage /></ProtectedRoute>} />
       <Route path="/welcome" element={<ProtectedRoute><Welcome /></ProtectedRoute>}/>
+      <Route path="/term" element={<PublicRoute><Term /></PublicRoute>} />
     </Routes>
     }
     </BrowserRouter>

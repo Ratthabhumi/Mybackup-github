@@ -75,6 +75,22 @@ const HomePage = () => {
 		</div>
 	  );
 	}
+	const cellRender2 = (current) => {
+		const key = current.format('YYYY-MM-DD');
+		const dayApps = appointmentsByDate[key] || [];
+		return (
+		  <div>
+			{dayApps.map((app, index) => (
+			  <div
+				key={index}
+				className="appointment"
+			  >
+				{app.userInfo.name} booked with Dr. {app.doctorInfo.firstName} {app.doctorInfo.lastName} @ {dayjs(app.date).format('HH:mm')}
+			  </div>
+			))}
+		  </div>
+		);
+	  };
   
 	return (
 		<UserLayout>
@@ -87,6 +103,15 @@ const HomePage = () => {
 			<TabPane tab="My Bookings" key="2">
 			<div className="custom-calendar-container">
 				<Calendar cellRender={cellRender} /></div>
+			</TabPane>
+			<TabPane tab="Dr.Queue" key="3">
+				<div className="custom-calendar-container">
+				<Calendar cellRender={cellRender2} /></div>
+
+			</TabPane>
+			<TabPane tab="Your Queue" key="4">
+				
+
 			</TabPane>
 		</Tabs>
 		</UserLayout>
