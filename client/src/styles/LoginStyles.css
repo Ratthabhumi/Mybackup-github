@@ -443,9 +443,6 @@
   top: 0px;
 }
 
-.terms-link {
-  margin-left: 5px; /* Adjust the value as needed */
-}
 
 @media (max-width: 768px) {
   .main-container {
