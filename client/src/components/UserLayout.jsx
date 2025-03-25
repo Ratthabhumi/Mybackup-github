@@ -147,7 +147,7 @@ const UserLayout = ({ children }) => {
         className={`toggle-btn ${isSidebarVisible ? 'sidebar-visible' : 'sidebar-hidden'}`}
         onClick={toggleSidebar}
       >
-        {isSidebarVisible ? '← Hide Sidebar' : 'Show Sidebar →'}
+        {isSidebarVisible ? '◀ Hide' : '▶'}
       </button>
     </div>
   );

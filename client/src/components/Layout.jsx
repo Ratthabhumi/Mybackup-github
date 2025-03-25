@@ -128,7 +128,7 @@ const Layout = ({ children }) => {
                       <Link className="logoheader" to="/" aria-label="Go to Welcome page">
                         <img src={Logo} alt="Logo" className="logo-image" />
                       </Link>
-                      <span className="reminder-text">
+                      <span className="reminder2-text">
                       No upcoming appointments</span>
                     </div>
                   )}
@@ -154,7 +154,7 @@ const Layout = ({ children }) => {
         className={`toggle-btn ${isSidebarVisible ? 'sidebar-visible' : 'sidebar-hidden'}`}
         onClick={toggleSidebar}
       >
-        {isSidebarVisible ? '← Hide Sidebar' : 'Show Sidebar →'}
+        {isSidebarVisible ? '◀ Hide' : '▶'}
       </button>
     </>
   );

@@ -163,7 +163,7 @@ const authController = async (req, res) => {
 		  if (fullDateTime.isBefore(doctorStart) || fullDateTime.isAfter(doctorEnd)) {
 			return res.status(200).send({ 
 			  success: false, 
-			  message: "Selected time is outside doctor's available hours" 
+			  message: "Sorry, the selected time doctor's unavailable."
 			});
 		  }
 		  const fromTime = fullDateTime.subtract(15, 'minutes').toISOString();

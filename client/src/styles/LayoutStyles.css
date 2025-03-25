@@ -1,6 +1,7 @@
 .main{
 	padding: 10px;
 	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .layout{
@@ -217,12 +218,15 @@ h6 {
 .custom-tabs .ant-tabs-tab-active:nth-child(1) .ant-tabs-tab-btn,
 .custom-tabs .ant-tabs-tab-active:nth-child(2) .ant-tabs-tab-btn {
   color: #000;
+  font-family: Montserrat, sans-serif;
 }
 
 .custom-tabs .ant-tabs-tab:nth-child(1) .ant-tabs-tab-btn,
 .custom-tabs .ant-tabs-tab:nth-child(2) .ant-tabs-tab-btn {
   color: #000;
   transition: color 0.3s ease;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
 }
 
 .logo3 {
@@ -254,7 +258,7 @@ h6 {
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
-  
+  font-family: Montserrat, sans-serif;
 }
 
 .btn-primary {
@@ -289,6 +293,7 @@ h6 {
 	cursor: pointer;
 	font-size: 16px;
 	margin-top: -3px; /* Adjust the value as needed to move the button up */
+	font-family: Montserrat, sans-serif;
   }
   
   .btn3-primary {
@@ -339,7 +344,7 @@ h6 {
   
   .toggle-btn.sidebar-visible {
 	top: 50px;
-	left: 95px; /* Adjust the left position when the sidebar is visible */
+	left: 150px; /* Adjust the left position when the sidebar is visible */
   }
   
   .toggle-btn.sidebar-hidden {
@@ -454,7 +459,7 @@ h6 {
 	  margin-left: 0;
 	}
 	.sidebar.visible {
-	  width: 80%;
+	  width: 65%;
 	  visibility: visible;
 	}
 	.toggle-btn {
@@ -477,6 +482,12 @@ h6 {
 		display: flex;
 		align-items: center;
 		}
+	
+		.reminder2-text {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 144px;
+		  }
   }
   @media (max-width: 480px) {
 	.logo-image {
@@ -495,6 +506,12 @@ h6 {
 	  margin-top: 5px;
 	}
 	.reminder-text {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 205px;
+	  }
+
+	  .reminder2-text {
 		display: inline-block;
 		vertical-align: middle;
 		margin-left: 205px;

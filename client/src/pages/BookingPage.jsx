@@ -73,7 +73,7 @@ const BookingPage = () => {
 			);
 			dispatch(hideLoading());
 			if (!availRes.data.success) {
-				return alert("Selected timeslot is not available. Please check availabilty first.");
+				return alert("Selected timeslot is not availables. Please check availabilty first.");
 			}
 			dispatch(showLoading());
 			const res = await axios.post('/api/v1/user/appointment',
