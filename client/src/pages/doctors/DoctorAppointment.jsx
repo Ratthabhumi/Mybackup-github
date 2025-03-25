@@ -121,7 +121,9 @@ const DoctorAppointment = () => {
 	<Layout>
 		<div className="ListofDoctors-button">Appointment Lists</div>
 		<div className="custom-table-container">
-		<Table className="custom-table" columns={columns} dataSource={appointment} /></div>
+		<Table className="custom-table" 
+		columns={columns} 
+		dataSource={appointment} scroll={{ x: '100%' }} /></div>
 	</Layout>
   )
 }
